@@ -10,8 +10,12 @@
             <div class="col-12">
                 <div class="row text-left">
                     <div class="col-3">
-                        <div class="number-card">
-                            1
+                        <div class="row justify-content-center">
+                            <div class="number-card">
+                                <div class="card-content">
+                                    <span>01</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-9">
@@ -21,10 +25,18 @@
             </div>
 
             <div class="col-12">
+                <br>
+            </div>
+
+            <div class="col-12">
                 <div class="row text-left">
                     <div class="col-3">
-                        <div class="number-card">
-                            2
+                        <div class="row justify-content-center">
+                            <div class="number-card">
+                                <div class="card-content">
+                                    <span>02</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-9">
@@ -34,10 +46,18 @@
             </div>
 
             <div class="col-12">
+                <br>
+            </div>
+
+            <div class="col-12">
                 <div class="row text-left">
                     <div class="col-3">
-                        <div class="number-card">
-                            3
+                        <div class="row justify-content-center">
+                            <div class="number-card">
+                                <div class="card-content">
+                                    <span>03</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-9">
@@ -58,5 +78,24 @@
 
 <style lang="scss" scoped>
     @import '../variables.scss';
+    .number-card {
+        width: 90px;
+        height: 120px;
+        background: url("../assets/background/charter-bg.png") no-repeat center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $font-color-light;
+    }
+    .card-content {
+        position: absolute;
+        top: 9%;
+        left: 25%;
+    }
 
+    .card-content span {
+        font-size: 2.5rem;
+    }
 </style>

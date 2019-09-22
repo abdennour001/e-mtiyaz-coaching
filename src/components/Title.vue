@@ -20,7 +20,7 @@
                <div class="col-12 margin-2">
                    <p class="lead">Si vous êtes intéressé à étudier en dehors de l'Algérie, vous pouvez postuler auprès des grandes universités
                        avec <strong>dirasat-international</strong>.</p>
-                   <a class="postulate margin-3" href="#"><i class="fas fa-arrow-alt-circle-right postulate-icon"></i> Postuler à l'étranger</a>
+                   <a class="read-more margin-3" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i> Postuler à l'étranger</a>
                </div>
            </div>
             <div class="col-lg-6">
@@ -79,21 +79,21 @@
     .margin-3 {
         margin-top: 30px;
     }
-    .postulate {
+    .read-more {
         text-decoration: none;
         color: $font-color-light;
         font-size: 1.2em;
         font-weight: 400;
         transition: 0.5s ease;
     }
-    .postulate:hover {
+    .read-more:hover {
         opacity: 0.8;
     }
-    .postulate-icon {
+    .read-more-icon {
         margin-right: 10px;
         transition: 0.5s ease;
     }
-    .postulate:hover .postulate-icon {
+    .read-more:hover .read-more-icon {
         transform: translateX(7px);
     }
 </style>

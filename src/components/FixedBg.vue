@@ -17,7 +17,7 @@
         display: table;
         height: 40rem;
         position: relative;
-        opacity: 0.8;
+        opacity: 0.9;
         width: 100%;
         background-size: cover;
     }

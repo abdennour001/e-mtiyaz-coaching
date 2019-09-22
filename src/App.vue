@@ -17,6 +17,16 @@
       <QualityCharter></QualityCharter>
       <!-- Nos engagement au service de l'excellence -->
       <ExcellenceService></ExcellenceService>
+      <!-- Notre offre de services -->
+      <Offers></Offers>
+      <!-- Notre centre d'excellence -->
+      <ExcellenceCenter></ExcellenceCenter>
+      <!-- Notre pédagogie d'excellence -->
+      <ExcellencePedagogie></ExcellencePedagogie>
+      <!-- Notre suivi pédagogique -->
+      <MonitoringPedagogique></MonitoringPedagogique>
+      <!-- Nos outils e-learning -->
+      <ToolsElearning></ToolsElearning>
   </div>
 </template>
 
@@ -28,6 +38,11 @@
   import FixedBgOffer from './components/FixedBgOffer'
   import QualityCharter from './components/QualityCharter'
   import ExcellenceService from './components/ExcellenceService'
+  import Offers from './components/Offers'
+  import ExcellenceCenter from './components/ExcellenceCenter'
+  import ExcellencePedagogie from './components/ExcellencePedagogie'
+  import MonitoringPedagogique from './components/MonitoringPedagogique'
+  import ToolsElearning from './components/ToolsElearning'
   export default {
     data() {
 
@@ -36,6 +51,11 @@
 
     },
     components: {
+      ToolsElearning,
+      MonitoringPedagogique,
+      ExcellencePedagogie,
+      ExcellenceCenter,
+      Offers,
       ExcellenceService,
       QualityCharter,
       FixedBgOffer,
