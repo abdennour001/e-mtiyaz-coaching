@@ -1,7 +1,7 @@
 <template>
     <div id="title" class="container-fluid">
         <div class="row">
-           <div class="col-lg-12 col-md-12 col-sm-12">
+           <div class="col-lg-6 col-md-6 col-sm-12">
                <div class="col-12">
                    <img src="../assets/logo/e-mtiyaz-white.png" style="width: 30%;"/>
                </div>
@@ -9,10 +9,13 @@
                    <h1>COACHING</h1>
                </div>
                <div class="col-12">
-                   <h3>Service éducatifs d'excellence</h3>
+                   <h3>Services éducatifs d'excellence</h3>
                </div>
                <div class="col-12 margin-2">
                    <a class="button" href="#">Rendez-vous</a>
+               </div>
+               <div class="col-6 offset-3 margin-2">
+                   <hr class="light">
                </div>
                <div class="col-12 margin-2">
                    <p class="lead">Si vous êtes intéressé à étudier en dehors de l'Algérie, vous pouvez postuler auprès des grandes universités
@@ -20,6 +23,8 @@
                    <a class="postulate margin-3" href="#"><i class="fas fa-arrow-alt-circle-right postulate-icon"></i> Postuler à l'étranger</a>
                </div>
            </div>
+            <div class="col-lg-6">
+            </div>
         </div>
     </div>
 </template>
@@ -34,7 +39,7 @@
     @import '../variables.scss';
     #title {
         color: $font-color-light;
-        margin-top: 80px;
+        margin-top: 140px;
     }
     h1 {
         font-size: 3.5em;
@@ -47,7 +52,7 @@
     h3 {
         font-weight: 500;
         letter-spacing: 1px;
-        color: $lighter-green-color;
+        color: $font-color-light;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
     .button {
@@ -76,9 +81,9 @@
     }
     .postulate {
         text-decoration: none;
-        color: $lighter-green-color;
-        font-size: 1.4em;
-        font-weight: 500;
+        color: $font-color-light;
+        font-size: 1.2em;
+        font-weight: 400;
         transition: 0.5s ease;
     }
     .postulate:hover {

@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <div class="d-flex align-items-center">
-                    <img class="logo-image" src="../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png">
+                    <img id="logo-image" class="logo-image" src="../assets/logo/e-mtiyaz-logo-hor-without-sentence.png">
                 </div>
             </a>
             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBarResponsive">
@@ -63,6 +63,19 @@
   import $ from 'jquery'
 
   $(document).ready(function() {
+
+    $(window).scroll(function(){
+      let scroll = $(window).scrollTop();
+      let logoImage = $('#logo-image');
+      if (scroll > 50) {
+        this.logoImageSrc = "../assets/logo/e-mtiyaz-logo-hor-without-sentence.png";
+        $('.navbar-default').css('background-color', 'rgb(255, 255, 255)');
+      } else {
+        this.logoImageSrc = '../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png';
+        $('.navbar-default').css('background-color', 'transparent');
+      }
+    });
+
     $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
       event.preventDefault();
       event.stopPropagation();
@@ -81,8 +94,15 @@
 
   export default {
     name: 'Navigation',
-    mounted() {
-
+    data() {
+      return {
+        logoImageSrc: '../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png'
+      }
+    },
+    methods: {
+      getLogoImageSrc() {
+        return require(this.logoImageSrc);
+      }
     }
   }
 </script>
@@ -100,6 +120,14 @@
     .navbar-default .nav-item.active .nav-link,
     .navbar-default .nav-item:hover .nav-link {
 
+    }
+
+    .navbar-default{
+        transition:500ms ease;
+        background:transparent;
+    }
+    .navbar-default.scrolled{
+        background:$font-color-light;
     }
 
     .navbar {
