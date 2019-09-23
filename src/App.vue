@@ -27,6 +27,10 @@
       <MonitoringPedagogique></MonitoringPedagogique>
       <!-- Nos outils e-learning -->
       <ToolsElearning></ToolsElearning>
+      <!-- Nos outils e-learning -->
+      <Testimony></Testimony>
+      <!-- Partners -->
+      <Partners></Partners>
   </div>
 </template>
 
@@ -43,6 +47,8 @@
   import ExcellencePedagogie from './components/ExcellencePedagogie'
   import MonitoringPedagogique from './components/MonitoringPedagogique'
   import ToolsElearning from './components/ToolsElearning'
+  import Testimony from './components/Testimony'
+  import Partners from './components/Partners'
   export default {
     data() {
 
@@ -51,6 +57,8 @@
 
     },
     components: {
+      Partners,
+      Testimony,
       ToolsElearning,
       MonitoringPedagogique,
       ExcellencePedagogie,

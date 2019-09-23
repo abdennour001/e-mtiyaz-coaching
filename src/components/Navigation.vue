@@ -65,14 +65,10 @@
   $(document).ready(function() {
 
     $(window).scroll(function(){
-      let scroll = $(window).scrollTop();
-      let logoImage = $('#logo-image');
-      if (scroll > 50) {
-        this.logoImageSrc = "../assets/logo/e-mtiyaz-logo-hor-without-sentence.png";
-        $('.navbar-default').css('background-color', 'rgb(255, 255, 255)');
+      if ($(window).scrollTop()) {
+        $('.navbar-default').addClass('white-nav');
       } else {
-        this.logoImageSrc = '../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png';
-        $('.navbar-default').css('background-color', 'transparent');
+        $('.navbar-default').removeClass('white-nav');
       }
     });
 
@@ -96,7 +92,7 @@
     name: 'Navigation',
     data() {
       return {
-        logoImageSrc: '../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png'
+        logoImageSrc: require('../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png')
       }
     },
     methods: {
@@ -132,6 +128,12 @@
 
     .navbar {
         padding: .4rem;
+    }
+
+    .white-nav {
+        background-color: rgb(255, 255, 255);
+        padding: 10px 25px;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     .active > a {
