@@ -1,7 +1,7 @@
 <template>
     <div class="content">
         <OfferTitle></OfferTitle>
-        <FixedBg></FixedBg>
+<!--        <FixedBg></FixedBg>-->
         <OfferBody></OfferBody>
     </div>
 </template>

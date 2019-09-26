@@ -1,18 +1,25 @@
 <template>
-    <div class="container-fluid">
-        <div class="row text-center">
+    <div class="container-fluid mb-5">
+        <div class="row text-center p-5">
             <div class="col-12">
-                <h1 class="display-4" style="text-transform: uppercase;">Témoignages</h1>
+                <h1 class="display-5" style="text-transform: uppercase;">Témoignages</h1>
             </div>
-            <div class="col-6 offset-3">
-                <hr class="dark">
+            <div class="col-12 mb-4">
+                <hr class="blue" style="width: 20%;">
             </div>
-        </div>
-        <div class="row jumbotron text-center">
+            <div class="col-lg-12 mb-4 text-center">
+                <div class="my-card-hor">
+                    <div class="my-card-body">
+                        <p class="lead" style="margin-top: 1rem; font-size: 1.3rem">
+                            <i class="fas fa-quote-left fa-lg"></i>
+                            Des nouvelles de nos enfants vous en aurez certainement car vous avez été plus que des enseignants.
+                            <i class="fas fa-quote-right fa-lg"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-4">
                 <div class="my-card">
-                    <div class="my-card-img">
-                    </div>
                     <div class="my-card-body">
                         <p class="lead" style="margin-top: 2rem">
                             <i class="fas fa-quote-left fa-lg"></i>
@@ -25,10 +32,8 @@
             </div>
             <div class="col-lg-4">
                 <div class="my-card">
-                    <div class="my-card-img">
-                    </div>
                     <div class="my-card-body">
-                        <p class="lead" style="font-size: 1rem;margin-top: 3.2rem">
+                        <p class="lead" style="font-size: 1.1rem;margin-top: 2rem">
                             <i class="fas fa-quote-left fa-lg"></i>
                             Vous m'avez été d'un important soutien durant cette année.
                             Merci à toute l'équipe de m'avoir déployé une grande aide. J'espère avoir l'occasion de vous revoir.
@@ -65,6 +70,10 @@
 
 <style lang="scss" scoped>
     @import '../variables.scss';
+    .display-5 {
+        color: $dark-blue-color;
+        font-weight: 400;
+    }
     #fixed {
         position: relative;
     }
@@ -85,23 +94,24 @@
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         transition: .2s ease-in;
     }
-    .my-card:hover {
+
+    .my-card-hor {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        background-color: #efefef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        transition: .2s ease-in;
+    }
+
+    .my-card:hover, .my-card-hor:hover {
         transform: scale(1.05);
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     }
-    .my-card-img {
-        position: absolute;
-        top: -20%;
-        left: 35%;
-        width: 110px;
-        height: 110px;
-        border: 10px solid white;
-        background: $dark-blue-color;
-        border-radius: 100px;
-        background: url("../assets/img/student-1.png") no-repeat;
-        background-size: cover;
-        background-color: white;
-    }
+
     .my-card-body {
         padding: 2rem;
         width: 100%;

@@ -2,10 +2,10 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-12">
-                <h1 class="display-4" style="text-transform: uppercase;">Notre suivi pédagogique</h1>
+                <h1 class="display-5" style="text-transform: uppercase;">Notre suivi pédagogique</h1>
             </div>
-            <div class="col-6 offset-3">
-                <hr class="dark">
+            <div class="col-12 mb-4">
+                <hr class="blue" style="width: 20%;">
             </div>
         </div>
 
@@ -20,24 +20,24 @@
             </div>
         </div>
         <div class="container-fluid squeeze">
-            <div class="row suivi-bg">
+            <div class="row suivi-bg text-center">
                 <div class="col-lg-4">
                   <div class="row text-left">
                     <div class="col-12">
-                        <div class="shrink">
+                        <div class="shrink left-sec">
                             <h5>Entretien de diagnostic pédagogique</h5>
-                            <p>Avant toute inscription pour un service e-mtiyaz, un entretien de diagnostic avec notre Conseiller Pédagogique est établi afin de cibler les besoins et les attentes de l’élève/l’étudiant et de sa famille. </p>
+                            <p class="lead">Avant toute inscription pour un service e-mtiyaz, un entretien de diagnostic avec notre Conseiller Pédagogique est établi afin de cibler les besoins et les attentes de l’élève/l’étudiant et de sa famille. </p>
                         </div>
                     </div>
                   </div>
                 </div>
                 <!--                    -->
                 <div class="col-lg-4">
-                    <div class="row text-center">
+                    <div class="row text-center center-sec">
                         <div class="col-12">
                             <div class="shrink">
                                 <h5>Suivi régulier</h5>
-                                <p>Dans le cadre de nos offres d’accompagnement scolaire, un point téléphonique est systématiquement tenu après la première séance  afin de confirmer ensemble l’adéquation de nos Intervenants
+                                <p class="lead">Dans le cadre de nos offres d’accompagnement scolaire, un point téléphonique est systématiquement tenu après la première séance  afin de confirmer ensemble l’adéquation de nos Intervenants
                                     Pédagogiques avec les besoins de l’élève. </p>
                             </div>
                         </div>
@@ -45,11 +45,11 @@
                 </div>
                 <!--                    -->
                 <div class="col-lg-4">
-                    <div class="row text-right">
+                    <div class="row text-right right-sec">
                         <div class="col-12">
                             <div class="shrink">
                                 <h5>Bilan final de progression</h5>
-                                <p>Régulièrement, un bilan pédagogique de suivi et d’évaluation est remis à l’élève ainsi qu’à sa famille afin de faire le point sur sa progression. Ce bilan permet d'apprécier les acquis de l'élève et de réévaluer ses besoins pédagogiques</p>
+                                <p class="lead">Régulièrement, un bilan pédagogique de suivi et d’évaluation est remis à l’élève ainsi qu’à sa famille afin de faire le point sur sa progression. Ce bilan permet d'apprécier les acquis de l'élève et de réévaluer ses besoins pédagogiques</p>
                             </div>
                         </div>
                     </div>
@@ -67,11 +67,23 @@
 
 <style lang="scss" scoped>
     @import "../variables.scss";
+    h5 {
+        color: $dark-blue-color;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    .display-5 {
+        color: $dark-blue-color;
+        font-weight: 400;
+    }
     .canvas {
     }
     .suivi-bg {
         background: url("../assets/background/bg.png") no-repeat;
         background-size: 100%;
+    }
+    .lead {
+        font-size: 1em;
     }
     .squeeze {
         width: 90%;
@@ -80,6 +92,18 @@
         font-size: 1.1rem;
         font-weight: 300;
         width: 80%;
+    }
+    .left-sec {
+        margin-left: 6.6rem;
+        margin-top: 5.5rem;
+    }
+    .center-sec {
+        margin-top: 12rem;
+        margin-left: 3rem;
+    }
+    .right-sec {
+        margin-top: 5.5rem;
+        margin-right: 2rem;
     }
     @media (max-height: 500px) {
         .suivi-bg {

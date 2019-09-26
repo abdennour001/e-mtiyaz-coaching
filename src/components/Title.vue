@@ -3,7 +3,7 @@
         <div class="row">
            <div class="col-lg-6 col-md-6 col-sm-12">
                <div class="col-12">
-                   <img src="../assets/logo/e-mtiyaz-white.png" style="width: 30%;"/>
+                   <img src="../assets/logo/e-mtiyaz-white.png" style="width: 50%;"/>
                </div>
                <div class="col-12">
                    <h1>COACHING</h1>
@@ -42,9 +42,9 @@
         margin-top: 140px;
     }
     h1 {
-        font-size: 3.5em;
+        font-size: 3em;
         font-weight: 600;
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color: $font-color-light;
     }
     h1.e-mtiyaz {
         font-weight: 300;

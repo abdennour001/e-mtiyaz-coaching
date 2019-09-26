@@ -26,8 +26,6 @@
       <!-- Notre suivi pédagogique -->
       <MonitoringPedagogique></MonitoringPedagogique>
       <!-- Nos outils e-learning -->
-      <ToolsElearning></ToolsElearning>
-      <!-- Nos outils e-learning -->
       <Testimony></Testimony>
       <!-- Partners -->
       <Partners></Partners>
@@ -46,7 +44,6 @@
   import ExcellenceCenter from './components/ExcellenceCenter'
   import ExcellencePedagogie from './components/ExcellencePedagogie'
   import MonitoringPedagogique from './components/MonitoringPedagogique'
-  import ToolsElearning from './components/ToolsElearning'
   import Testimony from './components/Testimony'
   import Partners from './components/Partners'
   export default {
@@ -59,7 +56,6 @@
     components: {
       Partners,
       Testimony,
-      ToolsElearning,
       MonitoringPedagogique,
       ExcellencePedagogie,
       ExcellenceCenter,
@@ -111,6 +107,51 @@
     }
     hr.dark {
         background-color: $font-color-dark;
-        opacity: 0.3;
+        height: 1px;
+        opacity: 1;
+    }
+    hr.blue {
+        background-color: $medium-blue-color;
+        height: 1px;
+        opacity: 1;
+        width: 50%;
+    }
+
+    /*title style*/
+
+
+    /*image border style*/
+    .img-border {
+        border: 30px solid whitesmoke;
+        -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /*squeeze*/
+    .squeeze-75 {
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+    .squeeze-50 {
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+
+    /*color orange*/
+    .orange-light {
+        color: $light-orange-color;
+    }
+    .orange-dark {
+        color: $dark-orange-color;
+    }
+
+    .img-border {
+        border: 30px solid whitesmoke;
+        -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     }
 </style>

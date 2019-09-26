@@ -1,35 +1,42 @@
 <template>
-    <div class="container-fluid pb-5">
-        <div class="row text-center">
+    <div class="container-fluid" style="padding: 5rem">
+        <div class="row text-center align-items-center">
             <div class="col-12">
-                <h1 class="display-4" style="text-transform: uppercase;">Nos engagement au service de l'excellence</h1>
+                <h1 class="display-5" style="text-transform: uppercase;">Nos engagement au service de l'excellence</h1>
             </div>
-            <div class="col-6 offset-3">
-                <hr class="dark">
-            </div>
-<!--            -->
-            <div class="col-lg-6">
-                <h1 class="display-5">Le niveau de formation de nos intervenants pédagogiques</h1>
-                <p class="lead mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-            <div class="col-lg-6">
-                <img src="../assets/logo/e-mtiyaz-hat.png" alt="">
+            <div class="col-12 mb-4">
+                <hr class="blue" style="width: 30%;">
             </div>
 <!--            -->
             <div class="col-lg-6">
-                <img src="../assets/logo/e-mtiyaz-hat.png" alt="">
+                <h1 class="display-4 text-left">Le niveau de formation de nos intervenants pédagogiques</h1>
+                <p class="lead mt-4 text-left">- Tous les Intervenants Pédagogiques e-mtiyaz sont soit titulaires d’un diplôme de niveau licence minimum (Bac+3), soit étudiants dans les meilleures Grandes Ecoles (d’ingénieurs, de commerce, etc.) en Algérie ou à l’international, soit professeurs en exercice ou ayant exercé.</p>
+                <p class="lead mt-4 text-left">- Les originaux des diplômes des intervenants sont systématiquement vérifiés. e-mtiyaz forme ses Intervenants : ceux-ci suivent une formation initiale qui leur permet d’obtenir le label de qualité e-mtiyaz et doivent régulièrement valider des modules de formation continue pour assurer l’excellence dans la durée.</p>
+            </div>
+            <div class="col-lg-6 mb-5">
+                <img src="../assets/img/img-services-1.png" class="w-100 img-border" alt="">
+            </div>
+<!--            -->
+            <div class="col-lg-6 mb-5">
+                <img src="../assets/img/img-services-2.png" class="w-75 img-border" alt="">
             </div>
             <div class="col-lg-6">
-                <h1 class="display-5">La qualité du processus de recrutement de nos intervenants pédagogiques</h1>
-                <p class="lead mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h1 class="display-4 text-left">La qualité du processus de recrutement de nos intervenants pédagogiques</h1>
+                <p class="lead mt-4 text-left">- Tests de connaissance : tous nos Intervenants sont soumis à des tests de  niveau dans la ou les matières dans lesquelles ils souhaitent donner des cours.
+                    Mise en situation : chaque candidat est évalué par un membre de notre équipe managériale au cours d’une véritable mise en situation où l’Intervenant doit faire preuve de ses qualités pédagogiques.</p>
+                <p class="lead mt-4 text-left">- Entretien individuel : chaque candidat est évalué lors d’un entretien individuel pour jauger ses compétences et s’assurer de sa capacité à motiver les élèves.
+                    e-mtiyaz exige de chaque Intervenant un casier judiciaire vierge avant d’être autorisé à dispenser des cours.
+                </p>
             </div>
 <!--            -->
             <div class="col-lg-6">
-                <h1 class="display-5">e-mtiyaz s'engage à vous satisfaire</h1>
-                <p class="lead mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h1 class="display-4 text-left">e-mtiyaz s'engage à vous satisfaire</h1>
+                <p class="lead mt-4 text-left">- Dès votre premier contact, notre Conseiller Pédagogique prend le temps nécessaire pour comprendre vos besoins, faire un diagnostic du niveau de l’élève et fixer avec vous des objectifs précis.</p>
+                <p class="lead mt-4 text-left">- Il vous transmet régulièrement, par téléphone et par écrit, des bilans pédagogiques évaluant la progression de votre enfant pour faire le point sur la poursuite des objectifs établis. </p>
+                <p class="lead mt-4 text-left">- Il offre à votre enfant une palette de contenus pédagogiques (cours, fiches de révision) pour lui permettre d’optimiser son travail.</p>
             </div>
             <div class="col-lg-6">
-                <img src="../assets/logo/e-mtiyaz-hat.png" alt="">
+                <img src="../assets/img/img-services-3.png" class="w-100 img-border" alt="">
             </div>
         </div>
     </div>
@@ -41,6 +48,19 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import '../variables.scss';
 
+    .display-5 {
+        color: $dark-blue-color;
+        font-weight: 400;
+    }
+    .display-4 {
+        font-size: 1.5em;
+        color: $dark-blue-color;
+        text-transform: uppercase;
+    }
+    .lead {
+        font-size: 1.1rem;
+    }
 </style>

@@ -1,52 +1,55 @@
 <template>
-    <div class="container-fluid">
-        <div class="row text-center">
+    <div class="container-fluid" style="padding: 60px;">
+        <div class="row text-center mb-5">
             <div class="col-12">
-                <h1 class="display-4" style="text-transform: uppercase;">Notre pédagogie d'excellence</h1>
+                <h1 class="display-5" style="text-transform: uppercase;">Notre pédagogie d'excellence</h1>
             </div>
-            <div class="col-6 offset-3">
-                <hr class="dark">
+            <div class="col-12 mb-4">
+                <hr class="blue" style="width: 20%;">
             </div>
             <!--            -->
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="row justify-content-center">
                     <div class="crop-div">
-                        <h3>Standards internationaux</h3>
+                        <h3 class="display-4">Standards internationaux</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-lg-9">
+                <p class="lead text-left">
+                    La pédagogie e-mtiyaz est une pédagogie d’excellence, basée sur les standards des formations supérieures sélectives en France et  à l’international. 	D’abord, elle repose sur une approche du cours divisée entre assimilation des connaissances théoriques et application pratique de celles-ci. Ensuite, elle s’adosse aux dernières technologies de e-learning que nous implémentons et personnalisons spécialement pour nos élèves.	Enfin, elle est délivrée, sous l’encadrement de notre Conseiller Pédagogique, par des Intervenants Pédagogiques, des Conseillers d’Orientation ainsi que des Coachs expérimentés et formés en permanence aux exigences académiques du moment.                </p>            </div>
+            <!--            -->
+            <div class="col-12 my-4">
             </div>
             <!--            -->
-            <div class="col-12">
-                <br>
-            </div>
-            <!--            -->
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="row justify-content-center">
                     <div class="crop-div">
-                        <h3>Meilleures établissements</h3>
+                        <h3 class="display-4">Meilleures établissements</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-lg-9">
+                <p class="lead text-left">
+                    Nos Intervenants Pédagogiques sont tous issus des meilleurs établissements d’enseignement supérieur en Algérie ou à l’étranger. Ils suivent une formation initiale délivrée par e-mtiyaz pour obtenir un label de qualité, gage de leur niveau de compétence.	De plus, ils sont régulièrement évalués à la fois par notre Conseiller Pédagogique mais surtout par nos élèves et leurs parents, pour répondre au mieux à leurs besoins. Enfin, ils sont astreints à une formation continue pour suivre en permanence l’évolution des programmes officiels, les parcours d’études et les procédures de sélection, pour maintenir tout au long de l’année un niveau d’excellence optimal.
+                </p>
             </div>
             <!--            -->
-            <div class="col-12">
-                <br>
+            <div class="col-12 my-4">
+
             </div>
             <!--            -->
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="row justify-content-center">
                     <div class="crop-div">
-                        <h3>Meilleures formations</h3>
+                        <h3 class="display-4">Meilleures formations</h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-lg-9">
+                <p class="lead text-left">
+                    Nos Conseillers d’Orientation sont tous issus des meilleures formations à l’international et possèdent une solide connaissance du monde de l’enseignement supérieur en plus d’une riche expérience en soutien scolaire et coaching d’excellence. Ils connaissent les parcours d’excellence pour en être le produit et sont donc les plus à même de guider vos enfants, pour les aider à s’orienter et leur transmettre les clés de la réussite.
+                </p>
             </div>
         </div>
     </div>
@@ -60,10 +63,20 @@
 
 <style lang="scss" scoped>
     @import '../variables.scss';
+
+    .display-5 {
+        color: $dark-blue-color;
+        font-weight: 400;
+    }
+    .display-4 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
     .crop-div {
-        width: 250px;
+        width: 200px;
         height: 250px;
-        background: radial-gradient($light-blue-color, $dark-blue-color);
+        background: $dark-blue-color;
         position: relative;
         display: flex;
         align-items: center;
@@ -77,5 +90,8 @@
         border-bottom: 60px solid white;
         border-left: 60px solid $dark-blue-color;
         width: 0;
+    }
+    .lead {
+        font-size: 1.2rem;
     }
 </style>

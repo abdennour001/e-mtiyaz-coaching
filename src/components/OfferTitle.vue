@@ -1,8 +1,11 @@
 <template>
-    <div class="container-fluid content">
+    <div class="container-fluid content my-4">
         <div class="row text-center">
             <div class="col-12">
-                <p class="lead">L'offre d'e-mtiyaz répond à trois besions essentiels des parcours <strong>scolaire</strong>, <strong>académique</strong> et <strong>professionnels</strong> :</p>
+                <p class="lead">L'offre d'e-mtiyaz répond à trois besions essentiels des parcours <strong>scolaires</strong>, <strong>académiques</strong> et <strong>professionnels</strong> :</p>
+            </div>
+            <div class="col-12">
+                <hr class="dark" style="width: 75%">
             </div>
         </div>
     </div>
@@ -19,5 +22,11 @@
     .content {
         color: $font-color-dark;
         width: 75%;
+    }
+    .lead {
+        font-size: 1.5rem;
+    }
+    strong {
+        font-weight: bold;
     }
 </style>

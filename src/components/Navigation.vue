@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <div class="d-flex align-items-center">
-                    <img id="logo-image" class="logo-image" src="../assets/logo/e-mtiyaz-logo-hor-without-sentence.png">
+                    <img id="logo-image" class="logo-image w-75" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white.png">
                 </div>
             </a>
             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBarResponsive">
@@ -62,13 +62,20 @@
 
   import $ from 'jquery'
 
+  // to use : await sleep(ms)
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   $(document).ready(function() {
 
-    $(window).scroll(function(){
+    $(window).scroll(async function () {
       if ($(window).scrollTop()) {
         $('.navbar-default').addClass('white-nav');
+        $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
       } else {
         $('.navbar-default').removeClass('white-nav');
+        $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white.png'));
       }
     });
 
@@ -127,7 +134,7 @@
     }
 
     .navbar {
-        padding: .4rem;
+        padding: .2rem;
     }
 
     .white-nav {

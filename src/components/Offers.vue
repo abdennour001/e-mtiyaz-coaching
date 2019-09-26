@@ -1,79 +1,129 @@
 <template>
     <div class="container-fluid">
-       <div class="row text-center">
+       <div class="row text-center justify-content-center">
            <div class="col-12">
-               <h1 class="display-4" style="text-transform: uppercase;">Notre offre de services</h1>
+               <h1 class="display-5" style="text-transform: uppercase;">Notre offre de services</h1>
            </div>
-           <div class="col-6 offset-3">
-               <hr class="dark">
+           <div class="col-12 mb-4">
+               <hr class="blue" style="width: 20%;">
            </div>
-          <div class="col-lg-4">
-              <div class="card card-orange">
-                  <div class="background">
-                      <span>01</span>
+<!--           -->
+          <div class="container-fluid jumbotron">
+              <div class="row text-center">
+                  <div class="col-4 orange">
+                      <router-link class="router orange" to="#">
+                          <div class="col-10 offset-2">
+                              <div class="row text-left">
+                                  <div class="col-4">
+                                      <h4>Parcours</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-10 offset-2">
+                              <div class="row text-left">
+                                  <div class="col-4">
+                                      <h1>Classique</h1>
+                                  </div>
+                              </div>
+                          </div>
+                      </router-link>
+                      <div class="col-10 offset-2">
+                          <div class="row text-left">
+                              <div class="col-12">
+                                  <ul class="ul-orange">
+                                      <li>Accompagnement scolaire</li>
+                                      <li>Langues</li>
+                                      <li>Orientation</li>
+                                      <li>Classes preparatoires aux examens et concours (CPEC)</li>
+                                      <li>Stages</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-10 offset-2">
+                          <div class="row text-left">
+                              <div class="col-12">
+                                  <a class="read-more orange-btn" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</a>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="title">
-                      <h2>Parcours Classique</h2>
+                  <!--           -->
+                  <div class="col-4 purple">
+                      <router-link class="router purple" to="#">
+                          <div class="col-10 offset-2">
+                              <div class="row text-left">
+                                  <div class="col-4">
+                                      <h4>Parcours</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-10 offset-2">
+                              <div class="row text-left">
+                                  <div class="col-4">
+                                      <h1>élite</h1>
+                                  </div>
+                              </div>
+                          </div>
+                      </router-link>
+                      <div class="col-10 offset-2">
+                          <div class="row text-left">
+                              <div class="col-12">
+                                  <ul class="ul-purple">
+                                      <li>Accompagnement scolaire</li>
+                                      <li>Orientation</li>
+                                      <li>Stages</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-10 offset-2">
+                          <div class="row text-left">
+                              <div class="col-12">
+                                  <a class="read-more purple-btn" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</a>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="content">
-                      <div class = "vertical"></div>
-                      <ul>
-                          <li>Accompagnement scolaire</li>
-                          <li>Langues</li>
-                          <li>Orientation</li>
-                          <li>Classes preparatoires aux examens et concours (CPEC)</li>
-                          <li>Stages</li>
-                      </ul>
-                  </div>
-                  <div class="footer">
-                      <a class="read-more" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i> Read More</a>
+                  <!--           -->
+                  <div class="col-4 green">
+                      <router-link class="router green" to="#">
+                          <div class="col-10 offset-2">
+                              <div class="row text-left">
+                                  <div class="col-4">
+                                      <h4>Parcours</h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-10 offset-2">
+                              <div class="row text-left">
+                                  <div class="col-4">
+                                      <h1>Déclic</h1>
+                                  </div>
+                              </div>
+                          </div>
+                      </router-link>
+                      <div class="col-10 offset-2">
+                          <div class="row text-left">
+                              <div class="col-12">
+                                  <ul class="ul-green">
+                                      <li>Accompagnement scolaire</li>
+                                      <li>Orientation</li>
+                                      <li>Stages</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-10 offset-2">
+                          <div class="row text-left">
+                              <div class="col-12">
+                                  <a class="read-more green-btn" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</a>
+                              </div>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
-           <!--        -->
-           <div class="col-lg-4">
-               <div class="card card-purple">
-                   <div class="background">
-                       <span>02</span>
-                   </div>
-                   <div class="title">
-                       <h2>Parcours élite</h2>
-                   </div>
-                   <div class="content">
-                       <div class = "vertical"></div>
-                       <ul>
-                           <li>Accompagnement</li>
-                           <li>Orientation</li>
-                           <li>stages</li>
-                       </ul>
-                   </div>
-                   <div class="footer">
-                       <a class="read-more" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i> Read More</a>
-                   </div>
-               </div>
-           </div>
-           <!--        -->
-           <div class="col-lg-4">
-               <div class="card card-green">
-                   <div class="background">
-                       <span>03</span>
-                   </div>
-                   <div class="title">
-                       <h2>Parcours Déclic</h2>
-                   </div>
-                   <div class="content">
-                       <div class = "vertical"></div>
-                       <ul>
-                           <li>Accompagnement scolaire</li>
-                           <li>Orientation</li>
-                           <li>Stages</li>
-                       </ul>
-                   </div>
-                   <div class="footer">
-                       <a class="read-more" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i> Read More</a>
-                   </div>
-               </div>
-           </div>
        </div>
     </div>
 </template>
@@ -86,57 +136,31 @@
 
 <style lang="scss" scoped>
     @import '../variables.scss';
-    .card {
-        width: 360px;
-        height: 480px;
-        padding: 1rem;
-        color: $font-color-light;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    h1 {
+        font-weight: bold;
+        text-transform: uppercase;
     }
-    .card-orange {
-        background: radial-gradient($light-orange-color, $dark-orange-color);
-        border: 1px solid $light-orange-color;
+    h4 {
+        text-transform: uppercase;
     }
-    .card-purple {
-        background: radial-gradient($light-purple-color, $dark-purple-color);
-        border: 1px solid $light-purple-color;
+    .display-5 {
+        color: $dark-blue-color;
+        font-weight: 400;
     }
-    .card-green {
-        background: radial-gradient($light-green-color, $dark-green-color);
-        border: 1px solid $light-green-color;
-    }
-    .background {
-        position: absolute;
-        top: 5%;
-        right: 4%;
-        font-weight: 600;
-        font-size: 15rem;
-    }
-    .content {
-        position: relative;
-        margin-top: 2.5rem;
-        z-index: 1000;
-    }
-    .footer {
-        position: relative;
-        z-index: 1000;
-    }
-    .background span {
-        padding: 0;
-        margin: 0;
-        opacity: 0.2;
-        pointer-events: none;
-        transition: 0.5s;
+    .router {
+        text-decoration: none;
     }
     .read-more {
         text-decoration: none;
-        color: $font-color-light;
         font-size: 1.2em;
         font-weight: 400;
+        display: inline-block;
         transition: 0.5s ease;
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    .jumbotron {
+        padding: 2rem;
     }
     .read-more:hover {
         opacity: 0.8;
@@ -148,11 +172,74 @@
     .read-more:hover .read-more-icon {
         transform: translateX(7px);
     }
-    .vertical {
-        border-left: 1px solid;
-        border-left-color: $font-color-light;
-        height: 150px;
-        position:absolute;
-        left: 0;
+    .orange {
+        color: $dark-orange-color;
+    }
+    .orange:hover .orange-btn {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .orange:hover .ul-orange{
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .purple {
+        color: $dark-purple-color;
+    }
+    .purple:hover .purple-btn {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .purple:hover .ul-purple{
+        font-size: 2rem;
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .green {
+        color: $dark-green-color;
+    }
+    .green:hover .green-btn {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .green:hover .ul-green{
+        font-size: 2rem;
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    .orange-btn {
+        color: $dark-orange-color;
+    }
+    .purple-btn {
+        color: $dark-purple-color;
+    }
+    .green-btn {
+        color: $dark-green-color;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 1rem;
+        border-left: 1px solid #000;
+        transition: 0.5s ease;
+        opacity: 0.6;
+    }
+
+    .ul-orange {
+        border-left-color: $dark-orange-color;
+    }
+
+    .ul-purple {
+        border-left-color: $dark-purple-color;
+    }
+
+    .ul-green {
+        border-left-color: $dark-green-color;
+    }
+
+    ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
     }
 </style>
