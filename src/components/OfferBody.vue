@@ -11,7 +11,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row text-left">
-                                        <h4>L'Accompagnement scolaire et méthodologique</h4>
+                                        <h4 class="display-5">L'Accompagnement scolaire et méthodologique</h4>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -39,7 +39,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row text-left">
-                                        <h4>L'orientation académique et professionnelle</h4>
+                                        <h4 class="display-5">L'orientation académique et professionnelle</h4>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -67,7 +67,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row text-left">
-                                        <h4>Le coaching personnel, scolaire et académique</h4>
+                                        <h4 class="display-5">Le coaching personnel, scolaire et académique</h4>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -99,8 +99,13 @@
 <style lang="scss" scoped>
     @import '../variables.scss';
 
+    .display-5 {
+        color: $dark-blue-color;
+        font-weight: 400;
+    }
+
     .content {
-        width: 75%;
+        width: 80%;
         margin: 0 auto;
     }
     .circle:after {
@@ -150,7 +155,7 @@
         background-size: cover;
     }
     .lead {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     h4 {
         text-transform: uppercase;

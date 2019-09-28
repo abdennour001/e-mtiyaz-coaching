@@ -2,37 +2,89 @@
   <div id="app">
       <!-- Navigation Section -->
       <Navigation></Navigation>
-      <div class="header">
+      <div id="section_home" class="header">
           <div class="header-content">
               <!-- Title Section -->
               <Title></Title>
           </div>
       </div>
       <!-- Le met du directeur -->
-      <WordAbout></WordAbout>
+      <WordAbout id="section_mot"></WordAbout>
       <!-- e-mtiyaz en quelques mots -->
-      <JumbotronAbout></JumbotronAbout>
+      <JumbotronAbout id="section_quelque_mot"></JumbotronAbout>
       <FixedBgOffer></FixedBgOffer>
       <!-- Notre charte de qualité -->
-      <QualityCharter></QualityCharter>
+      <QualityCharter id="section_chart"></QualityCharter>
       <!-- Nos engagement au service de l'excellence -->
-      <ExcellenceService></ExcellenceService>
+      <ExcellenceService id="section_engagement"></ExcellenceService>
       <!-- Notre offre de services -->
-      <Offers></Offers>
+      <Offers id="section_offre"></Offers>
       <!-- Notre centre d'excellence -->
-      <ExcellenceCenter></ExcellenceCenter>
+      <ExcellenceCenter id="section_centre"></ExcellenceCenter>
       <!-- Notre pédagogie d'excellence -->
-      <ExcellencePedagogie></ExcellencePedagogie>
+      <ExcellencePedagogie id="section_pedagogie"></ExcellencePedagogie>
       <!-- Notre suivi pédagogique -->
-      <MonitoringPedagogique></MonitoringPedagogique>
+      <MonitoringPedagogique id="section_suivi"></MonitoringPedagogique>
       <!-- Nos outils e-learning -->
       <Testimony></Testimony>
       <!-- Partners -->
       <Partners></Partners>
+      <!-- Location google maps -->
+      <Location id="section_contact"></Location>
+      <!-- demander un rendez-vous -->
+      <RendezVous></RendezVous>
+      <!-- Section contact -->
+      <Footer></Footer>
+
+      <a id="topBtn" href=""><i class="fas fa-arrow-up"></i></a>
   </div>
 </template>
 
 <script>
+
+    import $ from 'jquery';
+    import ScrollReveal from 'scrollreveal';
+
+    $(document).ready(() => {
+
+      window.sr = ScrollReveal({ reset: true });
+      sr.reveal('#title', {
+        duration: 2000,
+        origin: 'right',
+        distance: '300px'
+      })
+
+      $(window).scroll(() => {
+        if($(window).scrollTop() > 100) {
+          $('#topBtn').fadeIn("slow");
+        } else {
+          $('#topBtn').fadeOut("slow");
+        }
+      });
+
+      // Scroll up button
+      $('#topBtn').click((e) => {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop : 0
+        }, 800)
+      });
+
+      $(".scrollTo").on('click', function(e) {
+        let getElem = $(this).data('scroll');
+        e.preventDefault();
+        if ($(getElem).length) {
+          let getOffset = $(getElem).offset().top;
+          let targetDistance = 70;
+          $('html,body').animate({
+            scrollTop : getOffset - targetDistance
+          }, 500);
+        }
+        return false;
+      });
+
+    })
+
   import Navigation from './components/Navigation'
   import Title from './components/Title'
   import WordAbout from './components/WordAbout'
@@ -46,6 +98,10 @@
   import MonitoringPedagogique from './components/MonitoringPedagogique'
   import Testimony from './components/Testimony'
   import Partners from './components/Partners'
+  import RendezVous from './components/RendezVous'
+  import Contact from './components/Contact'
+  import Footer from './components/Footer'
+  import Location from './components/Location'
   export default {
     data() {
 
@@ -54,6 +110,10 @@
 
     },
     components: {
+      Location,
+      Footer,
+      Contact,
+      RendezVous,
       Partners,
       Testimony,
       MonitoringPedagogique,
@@ -153,5 +213,32 @@
         -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
         -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #topBtn {
+        text-decoration: none;
+        position: fixed;
+        padding-top: .5rem;
+        bottom: 40px;
+        right: 40px;
+        font-size: 22px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        background: $font-color-light;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border: none;
+        cursor: pointer;
+        color: $dark-blue-color;
+        transition: 0.5s ease;
+        display: none;
+    }
+    #topBtn:hover {
+        color: $font-color-light;
+        background: $dark-blue-color;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    body {
+        overflow-x: hidden;
     }
 </style>

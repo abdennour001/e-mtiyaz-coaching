@@ -105,6 +105,9 @@
         margin-top: 5.5rem;
         margin-right: 2rem;
     }
+    strong {
+        font-weight: bold;
+    }
     @media (max-height: 500px) {
         .suivi-bg {
             height: 150vh;

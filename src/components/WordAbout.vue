@@ -21,10 +21,7 @@
                     les Algériens sont peu représentés dans les plus prestigieuses institutions académiques
                     et scientifiques mondiales, loin derrière nos voisins tunisiens et marocains, pour ne citer qu’eux.
                     Pourtant, notre pays dispose d’un formidable potentiel humain et intellectuel et les
-                    exemples d’Algériens ayant brillé dès lors qu’ils disposent d’un cadre
-                </p>
-                <p class="lead">
-                    adéquat sont nombreux. Quelle est donc l’explication à ce triste constat ?
+                    exemples d’Algériens ayant brillé dès lors qu’ils disposent d’un cadre adéquat sont nombreux. Quelle est donc l’explication à ce triste constat ?
                 </p>
                 <p class="lead">Pour nous, au sein d’e-mtiyaz, nous sommes convaincus que
                     l’insuffisance, sinon l’absence de dispositifs et de structures d’accompagnement
@@ -59,7 +56,7 @@
         padding: 1.5rem;
     }
     .lead {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     svg {
         color: $medium-blue-color;

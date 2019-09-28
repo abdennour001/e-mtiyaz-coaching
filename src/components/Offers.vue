@@ -222,7 +222,7 @@
         padding-left: 1rem;
         border-left: 1px solid #000;
         transition: 0.5s ease;
-        opacity: 0.6;
+        opacity: 0.8;
     }
 
     .ul-orange {

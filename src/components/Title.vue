@@ -1,26 +1,23 @@
 <template>
     <div id="title" class="container-fluid">
         <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-12">
-               <div class="col-12">
-                   <img src="../assets/logo/e-mtiyaz-white.png" style="width: 50%;"/>
+           <div class="col-lg-6 col-md-6 col-sm-12 offset-3">
+               <div class="col-12 mt-3">
+                   <img src="../assets/logo/e-mtiyaz-logo-v3-coaching-white.png" style="width: 70%;"/>
                </div>
-               <div class="col-12">
-                   <h1>COACHING</h1>
+               <div class="col-12 margin-3">
+                   <p class="lead-1">Que vous souhaitez suivre vos études en Algérie ou à l’international, e-mtiyaz vous accompagne dans vos objectifs de réussite.</p>
                </div>
-               <div class="col-12">
-                   <h3>Services éducatifs d'excellence</h3>
-               </div>
-               <div class="col-12 margin-2">
-                   <a class="button" href="#">Rendez-vous</a>
-               </div>
-               <div class="col-6 offset-3 margin-2">
+               <div class="col-12 mb-4">
                    <hr class="light">
                </div>
+               <div class="col-12">
+                   <p class="lead-2">
+                       Demandez un rendez-vous et recevez un diagnostic pédagogique
+                   </p>
+               </div>
                <div class="col-12 margin-2">
-                   <p class="lead">Si vous êtes intéressé à étudier en dehors de l'Algérie, vous pouvez postuler auprès des grandes universités
-                       avec <strong>dirasat-international</strong>.</p>
-                   <a class="read-more margin-3" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i> Postuler à l'étranger</a>
+                   <a class="button scrollTo" href="#" data-scroll="#section_rendez_vous">Demander un rendez-vous</a>
                </div>
            </div>
             <div class="col-lg-6">
@@ -55,12 +52,20 @@
         color: $font-color-light;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
+    .lead-1 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    .lead-2 {
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
     .button {
         display: inline-block;
         text-decoration: none;
         border-radius: 200px;
         font-size: 1.1em;
-        font-weight: 600;
+        font-weight: 400;
         padding: 10px;
         color: $font-color-light;
         border: 1px solid $font-color-light;

@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid p-5">
+    <div class="container-fluid p-5 mt-5">
         <div class="row text-center">
             <div class="col-12">
                 <h1 class="display-5" style="text-transform: uppercase;">Notre Charte de qualité</h1>

@@ -12,15 +12,15 @@
             <div class="collapse navbar-collapse" id="navBarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link active" href="#">Accueil</a>
+                        <a class="nav-link scrollTo" href="" data-scroll="#section_home">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             À-propos <i class="fas fa-angle-down ml-2"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
-                            <li><a class="dropdown-item" href="#">Le mot de directeur</a></li>
-                            <li><a class="dropdown-item" href="#">e-mtiyaz en quelques mots</a></li>
+                            <li><a class="dropdown-item scrollTo active" href="#" data-scroll="#section_mot">Le mot de directeur</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_quelque_mot">e-mtiyaz en quelques mots</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -28,29 +28,28 @@
                             Services <i class="fa fa-angle-down ml-2"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
-                            <li><a class="dropdown-item" href="#">Notre charte de qualité</a></li>
-                            <li><a class="dropdown-item" href="#">Nos engagements au service</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_chart">Notre charte de qualité</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_engagement">Nos engagements au service</a></li>
                             <li class="dropdown-submenu">
                                 <a href="#" id="dropdownSubMenu"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">
                                     Notre offre de service <i class="fas fa-angle-down ml-2"></i>
                                 </a>
                                 <ul aria-labelledby="dropdownSubMenu" class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Parcours Classique</a></li>
-                                    <li><a class="dropdown-item" href="#">Parcours Elite</a></li>
-                                    <li><a class="dropdown-item" href="#">Parcours Declic</a></li>
+                                    <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_offre">Parcours Classique</a></li>
+                                    <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_offre">Parcours Elite</a></li>
+                                    <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_offre">Parcours Declic</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="#">Notre Centre d'excellence</a></li>
-                            <li><a class="dropdown-item" href="#">Notre pédagogie d'excellence</a></li>
-                            <li><a class="dropdown-item" href="#">Notre suivi pédagogique</a></li>
-                            <li><a class="dropdown-item" href="#">Nos outils e-learing</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_centre">Notre Centre d'excellence</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_pedagogie">Notre pédagogie d'excellence</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_suivi">Notre suivi pédagogique</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link scrollTo" href="#" data-scroll="#section_contact">Contact</a>
                     </li>
                     <li class="nav-item nav-link">
-                        <a class="button" href="#">Rendez-vous</a>
+                        <a class="button scrollTo" href="" data-scroll="#section_rendez_vous">Rendez-vous</a>
                     </li>
                 </ul>
             </div>
@@ -68,6 +67,13 @@
   }
 
   $(document).ready(function() {
+    if ($(window).scrollTop()) {
+      $('.navbar-default').addClass('white-nav');
+      $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
+    } else {
+      $('.navbar-default').removeClass('white-nav');
+      $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white.png'));
+    }
 
     $(window).scroll(async function () {
       if ($(window).scrollTop()) {
@@ -93,6 +99,8 @@
         $('.dropdown-submenu .show').removeClass("show");
       });
     });
+
+
   })
 
   export default {
@@ -136,15 +144,41 @@
     .navbar {
         padding: .2rem;
     }
-
+    .dropdown-item {
+        margin-top: .5rem;
+        text-transform: uppercase;
+    }
     .white-nav {
         background-color: rgb(255, 255, 255);
         padding: 10px 25px;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
 
+    .active > a > svg {
+        color: $dark-blue-color;
+    }
+
     .active > a {
         -webkit-text-fill-color: $dark-blue-color;
+    }
+
+    .dropdown-item {
+        color: $font-color-dark;
+    }
+
+    .dropdown-item.active {
+        background-color: transparent;
+        color: $dark-blue-color;
+    }
+    .dropdown-item .active > a {
+        color: $dark-blue-color;
+    }
+    .dropdown-item:hover {
+
+    }
+    .dropdown-item:active {
+        background-color: transparent;
+        color: $dark-blue-color;
     }
 
     .navbar-nav li {
@@ -172,6 +206,8 @@
         display: none;
     }
     .dropdown-menu {
+        margin-top: 2rem;
+        padding: 1rem;
         transition: 0.5s ease;
     }
 
@@ -193,8 +229,8 @@
     }
 
     .dropdown-submenu>.dropdown-menu {
-        top: 0;
-        left: -73%;
+        top: -80%;
+        left: -90%;
     }
 
     .button {

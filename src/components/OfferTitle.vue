@@ -4,9 +4,6 @@
             <div class="col-12">
                 <p class="lead">L'offre d'e-mtiyaz répond à trois besions essentiels des parcours <strong>scolaires</strong>, <strong>académiques</strong> et <strong>professionnels</strong> :</p>
             </div>
-            <div class="col-12">
-                <hr class="dark" style="width: 75%">
-            </div>
         </div>
     </div>
 </template>
@@ -24,9 +21,9 @@
         width: 75%;
     }
     .lead {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     strong {
-        font-weight: bold;
+        font-weight: 500;
     }
 </style>
