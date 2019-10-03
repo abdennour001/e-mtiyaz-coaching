@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="row text-left">
-                                        <p class="lead">
+                                        <p id="p-1" class="lead">
                                             Parce que la confiance en soi, l’écoute et la motivation sont
                                             les facteurs clés de la réussite scolaire de l’enfant, e-mtiyaz a mis au point
                                             une gamme de services allant de l’aide aux devoirs au soutien scolaire en passant par des modules de préparation
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="row text-left">
-                                        <p class="lead">
+                                        <p id="p-2" class="lead">
                                             Grâce à notre expérience à l’international et à la qualité de nos Conseillers d’Orientation,
                                             e-mtiyaz aide ses élèves à faire avancer, guider et concrétiser leur réflexion sur leur avenir,
                                             que ce soit pour la poursuite d’études,
@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="row text-left">
-                                        <p class="lead">
+                                        <p id="p-3" class="lead">
                                             Avec e-mtiyaz, la préparation d’un objectif académique ou professionnel devient une
                                             science exacte ! Examens, concours ou poursuite d’études à l’étranger sont autant de défis qui
                                             nécessitent une préparation personnalisée et transversale : orientation, méthodologie, stratégies de révision,
@@ -91,6 +91,27 @@
 </template>
 
 <script>
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('#p-1', {
+      duration: 2000,
+      origin: 'top',
+      distance: '50px'
+    })
+    sr.reveal('#p-2', {
+      duration: 2000,
+      origin: 'top',
+      distance: '50px'
+    })
+    sr.reveal('#p-3', {
+      duration: 2000,
+      origin: 'top',
+      distance: '50px'
+    })
+  });
   export default {
     name: 'OfferBody'
   }

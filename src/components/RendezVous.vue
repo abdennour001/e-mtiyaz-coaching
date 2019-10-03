@@ -1,37 +1,97 @@
 <template>
-    <div id="section_rendez_vous" class="container-fluid jumbotron" >
-        <div class="row text-center squeeze-75">
-            <div class="col-12">
-                <p class="lead">Besoin d'être soutenu ou accompagné dans votre projet d'études ou celui de votre enfant ?</p>
+    <div id="section_rendez_vous" class="container-fluid jumbotron">
+        <div class="row text-center my-form">
+            <div class="col-12" style="padding: 0">
+                <div id="nanobar-rendez-vous"></div>
             </div>
+            <div class="row text-center squeeze-75">
+                <div class="col-12">
+                    <p class="lead">Besoin d'être soutenu ou accompagné dans votre projet d'études ou celui de votre enfant ?</p>
+                </div>
+            </div>
+            <form id="contact" method="post" class="squeeze-50">
+                <div class="form-row">
+                    <div class="form-group col-md-6 text-left">
+                        <input v-model="nom" type="text" class="form-control" id="nom" placeholder="Nom">
+                        <label v-if="!nom && firstSubmit" for="nom" class="text-warning" style="padding: 0; margin: 0;padding-left: 13px">Champ requis</label>
+                    </div>
+                    <div class="form-group col-md-6 text-left mb-4">
+                        <input v-model="email" type="email" class="form-control" id="email" placeholder="Email">
+                        <label v-if="!email && firstSubmit" for="email" class="text-warning" style="padding: 0; margin: 0;padding-left: 13px">Champ requis</label>
+                    </div>
+                    <div class="form-group col-md-6 text-left">
+                        <input v-model="prenom" type="text" class="form-control" id="prenom" placeholder="Prenom">
+                        <label v-if="!prenom && firstSubmit" for="prenom" class="text-warning" style="padding: 0; margin: 0;padding-left: 13px">Champ requis</label>
+                    </div>
+                    <div class="form-group col-md-6 text-left mb-4">
+                        <input v-model="tel" type="tel" class="form-control" id="telephone" placeholder="Téléphone">
+                        <label v-if="!tel && firstSubmit" for="tel" class="text-warning" style="padding: 0; margin: 0;padding-left: 13px">Champ requis</label>
+                    </div>
+                    <div class="form-group col-md-6 text-left">
+                        <input v-model="niveau" type="text" class="form-control" id="niveau" placeholder="Niveau d'étude actuel">
+                        <label v-if="!niveau && firstSubmit" for="niveau" class="text-warning" style="padding: 0; margin: 0;padding-left: 13px">Champ requis</label>
+                    </div>
+                    <div class="form-group col-md-6 text-left mb-4">
+                        <input v-model="etablissement" type="text" class="form-control" id="etablissement" placeholder="Établissement actuel">
+                        <label v-if="!etablissement && firstSubmit" for="etablissement" class="text-warning" style="padding: 0; margin: 0;padding-left: 13px">Champ requis</label>
+                    </div>
+                </div>
+                <div id="rendezVousB">
+                    <button type="button" @click="contactCall" class="button w-100">Envoyer</button>
+                </div>
+                <div v-if="success" class="alert-success" style="height: 45px; padding-top: 10px; margin-top: 10px; border-radius: 100px">Vous avez envoyé la demande avec succès</div>
+            </form>
         </div>
-        <form class="squeeze-50">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <input v-model="nom" type="text" class="form-control" id="nom" placeholder="Nom">
-                </div>
-                <div class="form-group col-md-6 text-left mb-4">
-                    <input v-model="email" type="email" class="form-control" id="email" placeholder="Email">
-                </div>
-                <div class="form-group col-md-6 text-left">
-                    <input v-model="prenom" type="text" class="form-control" id="prenom" placeholder="Prenom">
-                </div>
-                <div class="form-group col-md-6 text-left mb-4">
-                    <input v-model="tel" type="tel" class="form-control" id="telephone" placeholder="Téléphone">
-                </div>
-                <div class="form-group col-md-6 text-left">
-                    <input v-model="niveau" type="text" class="form-control" id="niveau" placeholder="Niveau d'étude actuel">
-                </div>
-                <div class="form-group col-md-6 text-left mb-4">
-                    <input v-model="etablissement" type="text" class="form-control" id="etablissement" placeholder="Établissement actuel">
-                </div>
-            </div>
-            <button type="submit" class="button w-100">Envoyer</button>
-        </form>
     </div>
 </template>
 
 <script>
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('#nom', {
+      duration: 1000,
+      origin: 'left',
+      delay: 500,
+      distance: '100px'
+    })
+    sr.reveal('#email', {
+      duration: 1000,
+      origin: 'right',
+      delay: 500,
+      distance: '100px'
+    })
+    sr.reveal('#prenom', {
+      duration: 1000,
+      origin: 'left',
+      delay: 250,
+      distance: '100px'
+    })
+    sr.reveal('#telephone', {
+      duration: 1000,
+      origin: 'right',
+      delay: 250,
+      distance: '100px'
+    })
+    sr.reveal('#niveau', {
+      duration: 1000,
+      origin: 'left',
+      distance: '100px'
+    })
+    sr.reveal('#etablissement', {
+      duration: 1000,
+      origin: 'right',
+      distance: '100px'
+    });
+    sr.reveal('#rendezVousB', {
+      duration: 1000,
+      origin: 'bottom',
+      delay: 500,
+      distance: '100px'
+    })
+  });
   export default {
     name: 'RendezVous',
     data() {
@@ -41,7 +101,59 @@
         email:'',
         tel:'',
         niveau: '',
-        etablissement: ''
+        etablissement: '',
+        firstSubmit: false,
+        success: false
+      }
+    },
+    mounted() {
+
+    },
+    methods: {
+      contactCall() {
+        this.firstSubmit = true;
+        if (this.nom && this.prenom && this.email && this.tel && this.niveau && this.etablissement) {
+          let data = new FormData();
+          data.append('nom', this.nom);
+          data.append('prenom', this.prenom);
+          data.append('email', this.email);
+          data.append('telephone', this.telephone);
+          data.append('niveau', this.niveau);
+          data.append('etablissement', this.etablissement);
+
+          // loading
+          let options = {
+            id: 'my-id',
+            target: document.getElementById('nanobar-rendez-vous')
+          };
+          let Nanobar = require('nanobar');
+          let nanobar = new Nanobar( options );
+          //move bar
+          nanobar.go( 30 ); // size bar 30%
+
+          // to use : await sleep(ms)
+          function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+          }
+
+          this.axios.post("http://127.0.0.1/e-mtiyaz-coaching/send_rendez_vous.php", data)
+            .then(async response => {
+              if (response.data.includes('Message has been sent')) {
+                this.success = true
+                nanobar.go(50);
+                nanobar.go(55);
+                nanobar.go(80);
+                nanobar.go(100);
+                await sleep(5000);
+                this.success = false;
+              } else {
+                alert(2)
+              }
+            })
+            .catch(e => {
+              console.error(e);
+            });
+        }
       }
     }
   }
@@ -50,12 +162,12 @@
 <style lang="scss" scoped>
     @import '../variables.scss';
     .jumbotron {
-        /*background: url("../assets/background/rendez-vous-bg-tran.png") no-repeat center;*/
-        /*background-size: cover;*/
+        background: url("../assets/background/rendez-vous-bg-tran.png") no-repeat center;
+        background-size: cover;
     }
     .lead {
         font-size: 2rem;
-        font-weight: 400;
+        font-weight: 500;
     }
     .button {
         text-decoration: none;
@@ -74,6 +186,14 @@
         border-radius: 200px;
     }
     .form-control {
-        font-size: 1.1rem;
+        font-size: .9rem;
+    }
+    label {
+        font-size: .9rem;
+    }
+    .my-form {
+        padding-bottom: 2rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     }
 </style>

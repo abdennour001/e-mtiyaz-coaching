@@ -181,6 +181,23 @@
 </template>
 
 <script>
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('.number-card', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px'
+    })
+    sr.reveal('.lead', {
+      duration: 1000,
+      origin: 'top',
+      delay: 200,
+      distance: '50px'
+    })
+  });
   export default {
     name: 'QualityCharter'
   }

@@ -6,6 +6,11 @@ import '@fortawesome/fontawesome-free-solid'
 import '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-free-brands'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
+
 import App from './App.vue'
 import router from './router'
 import store from './store'

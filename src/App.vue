@@ -1,42 +1,6 @@
 <template>
   <div id="app">
-      <!-- Navigation Section -->
-      <Navigation></Navigation>
-      <div id="section_home" class="header">
-          <div class="header-content">
-              <!-- Title Section -->
-              <Title></Title>
-          </div>
-      </div>
-      <!-- Le met du directeur -->
-      <WordAbout id="section_mot"></WordAbout>
-      <!-- e-mtiyaz en quelques mots -->
-      <JumbotronAbout id="section_quelque_mot"></JumbotronAbout>
-      <FixedBgOffer></FixedBgOffer>
-      <!-- Notre charte de qualité -->
-      <QualityCharter id="section_chart"></QualityCharter>
-      <!-- Nos engagement au service de l'excellence -->
-      <ExcellenceService id="section_engagement"></ExcellenceService>
-      <!-- Notre offre de services -->
-      <Offers id="section_offre"></Offers>
-      <!-- Notre centre d'excellence -->
-      <ExcellenceCenter id="section_centre"></ExcellenceCenter>
-      <!-- Notre pédagogie d'excellence -->
-      <ExcellencePedagogie id="section_pedagogie"></ExcellencePedagogie>
-      <!-- Notre suivi pédagogique -->
-      <MonitoringPedagogique id="section_suivi"></MonitoringPedagogique>
-      <!-- Nos outils e-learning -->
-      <Testimony></Testimony>
-      <!-- Partners -->
-      <Partners></Partners>
-      <!-- Location google maps -->
-      <Location id="section_contact"></Location>
-      <!-- demander un rendez-vous -->
-      <RendezVous></RendezVous>
-      <!-- Section contact -->
-      <Footer></Footer>
-
-      <a id="topBtn" href=""><i class="fas fa-arrow-up"></i></a>
+      <router-view></router-view>
   </div>
 </template>
 
@@ -47,12 +11,24 @@
 
     $(document).ready(() => {
 
-      window.sr = ScrollReveal({ reset: true });
-      sr.reveal('#title', {
-        duration: 2000,
-        origin: 'right',
-        distance: '300px'
+      window.srTitle = ScrollReveal({ reset: true });
+      window.sr = ScrollReveal({ reset: false });
+      srTitle.reveal('#title', {
+        duration: 1000,
+        origin: 'top',
+        distance: '50px'
       })
+      sr.reveal('.display-5', {
+        duration: 1000,
+        origin: 'left',
+        distance: '250px'
+      })
+      sr.reveal('.blue', {
+        duration: 1000,
+        origin: 'right',
+        distance: '250px'
+      });
+
 
       $(window).scroll(() => {
         if($(window).scrollTop() > 100) {
@@ -85,48 +61,25 @@
 
     })
 
-  import Navigation from './components/Navigation'
-  import Title from './components/Title'
-  import WordAbout from './components/WordAbout'
-  import JumbotronAbout from './components/JumbotronAbout'
-  import FixedBgOffer from './components/FixedBgOffer'
-  import QualityCharter from './components/QualityCharter'
-  import ExcellenceService from './components/ExcellenceService'
-  import Offers from './components/Offers'
-  import ExcellenceCenter from './components/ExcellenceCenter'
-  import ExcellencePedagogie from './components/ExcellencePedagogie'
-  import MonitoringPedagogique from './components/MonitoringPedagogique'
-  import Testimony from './components/Testimony'
-  import Partners from './components/Partners'
-  import RendezVous from './components/RendezVous'
-  import Contact from './components/Contact'
-  import Footer from './components/Footer'
-  import Location from './components/Location'
+
   export default {
     data() {
 
     },
     mounted() {
+      let options = {
+        classname: 'upper-nanobar',
+        id: 'my-id',
+        target: document.getElementById('nanobar')
+      };
+      let Nanobar = require('nanobar');
+      let nanobar = new Nanobar( options );
+      //move bar
+      nanobar.go( 30 ); // size bar 30%
+      nanobar.go( 76 ); // size bar 76%
 
-    },
-    components: {
-      Location,
-      Footer,
-      Contact,
-      RendezVous,
-      Partners,
-      Testimony,
-      MonitoringPedagogique,
-      ExcellencePedagogie,
-      ExcellenceCenter,
-      Offers,
-      ExcellenceService,
-      QualityCharter,
-      FixedBgOffer,
-      JumbotronAbout,
-      WordAbout,
-      Title,
-      Navigation
+      // size bar 100% and and finish
+      nanobar.go(100);
     }
   }
 </script>
@@ -240,5 +193,20 @@
     }
     body {
         overflow-x: hidden;
+    }
+    .upper-nanobar {
+
+    }
+    .nanobar {
+        width: 100%;
+        height: 3px;
+        z-index: 9999;
+        top: 0;
+    }
+    .bar {
+        width: 0;
+        height: 100%;
+        transition: height .3s;
+        background: linear-gradient($dark-blue-color);
     }
 </style>

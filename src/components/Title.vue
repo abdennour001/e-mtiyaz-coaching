@@ -13,7 +13,7 @@
                </div>
                <div class="col-12">
                    <p class="lead-2">
-                       Demandez un rendez-vous et recevez un diagnostic pédagogique
+                       Demandez un rendez-vous et recevez un diagnostic pédagogique.
                    </p>
                </div>
                <div class="col-12 margin-2">

@@ -11,15 +11,15 @@
           <div class="container-fluid jumbotron">
               <div class="row text-center">
                   <div class="col-4 orange">
-                      <router-link class="router orange" to="#">
-                          <div class="col-10 offset-2">
+                      <router-link class="router orange" to="/parcours/parcours-classique">
+                          <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
                                   <div class="col-4">
                                       <h4>Parcours</h4>
                                   </div>
                               </div>
                           </div>
-                          <div class="col-10 offset-2">
+                          <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
                                   <div class="col-4">
                                       <h1>Classique</h1>
@@ -27,7 +27,7 @@
                               </div>
                           </div>
                       </router-link>
-                      <div class="col-10 offset-2">
+                      <div class="col-10 offset-2 offers">
                           <div class="row text-left">
                               <div class="col-12">
                                   <ul class="ul-orange">
@@ -43,22 +43,22 @@
                       <div class="col-10 offset-2">
                           <div class="row text-left">
                               <div class="col-12">
-                                  <a class="read-more orange-btn" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</a>
+                                  <router-link class="read-more orange-btn" to="/parcours/parcours-classique"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</router-link>
                               </div>
                           </div>
                       </div>
                   </div>
                   <!--           -->
                   <div class="col-4 purple">
-                      <router-link class="router purple" to="#">
-                          <div class="col-10 offset-2">
+                      <router-link class="router purple" to="/parcours/parcours-elite">
+                          <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
                                   <div class="col-4">
                                       <h4>Parcours</h4>
                                   </div>
                               </div>
                           </div>
-                          <div class="col-10 offset-2">
+                          <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
                                   <div class="col-4">
                                       <h1>élite</h1>
@@ -66,7 +66,7 @@
                               </div>
                           </div>
                       </router-link>
-                      <div class="col-10 offset-2">
+                      <div class="col-10 offset-2 offers">
                           <div class="row text-left">
                               <div class="col-12">
                                   <ul class="ul-purple">
@@ -80,22 +80,22 @@
                       <div class="col-10 offset-2">
                           <div class="row text-left">
                               <div class="col-12">
-                                  <a class="read-more purple-btn" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</a>
+                                  <router-link class="read-more purple-btn" to="/parcours/parcours-elite"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</router-link>
                               </div>
                           </div>
                       </div>
                   </div>
                   <!--           -->
                   <div class="col-4 green">
-                      <router-link class="router green" to="#">
-                          <div class="col-10 offset-2">
+                      <router-link class="router green" to="/parcours/parcours-declic">
+                          <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
                                   <div class="col-4">
                                       <h4>Parcours</h4>
                                   </div>
                               </div>
                           </div>
-                          <div class="col-10 offset-2">
+                          <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
                                   <div class="col-4">
                                       <h1>Déclic</h1>
@@ -103,7 +103,7 @@
                               </div>
                           </div>
                       </router-link>
-                      <div class="col-10 offset-2">
+                      <div class="col-10 offset-2 offers">
                           <div class="row text-left">
                               <div class="col-12">
                                   <ul class="ul-green">
@@ -117,7 +117,7 @@
                       <div class="col-10 offset-2">
                           <div class="row text-left">
                               <div class="col-12">
-                                  <a class="read-more green-btn" href="#"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</a>
+                                  <router-link class="read-more green-btn" to="/parcours/parcours-declic"><i class="fas fa-arrow-alt-circle-right read-more-icon"></i>Lire la suite</router-link>
                               </div>
                           </div>
                       </div>
@@ -129,8 +129,28 @@
 </template>
 
 <script>
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('.title-parcours', {
+      duration: 1000,
+      origin: 'right',
+      distance: '100px'
+    });
+    sr.reveal('.offers', {
+      duration: 1000,
+      origin: 'top',
+      delay: 500,
+      distance: '50px'
+    });
+  });
   export default {
-    name: 'Offers'
+    name: 'Offers',
+    methods: {
+
+    }
   }
 </script>
 
@@ -161,6 +181,8 @@
     }
     .jumbotron {
         padding: 2rem;
+        background: url("../assets/background/bg-offers.jpg") no-repeat;
+        background-size: cover;
     }
     .read-more:hover {
         opacity: 0.8;
@@ -222,7 +244,8 @@
         padding-left: 1rem;
         border-left: 1px solid #000;
         transition: 0.5s ease;
-        opacity: 0.8;
+        font-weight: 400;
+        opacity: 0.7;
     }
 
     .ul-orange {

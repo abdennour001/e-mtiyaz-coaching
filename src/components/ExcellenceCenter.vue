@@ -20,11 +20,11 @@
                 </p>
             </div>
             <div class="col-lg-6 text-right">
-                <img src="../assets/img/centre-1.png" class="img-border" style="width: 70%" alt="">
+                <img src="../assets/img/centre-1.png" class="img-border i" style="width: 70%" alt="">
             </div>
 <!--            -->
             <div class="col-lg-6 text-left">
-                <img src="../assets/img/center-2.png" class="img-border" style="width: 75%" alt="">
+                <img src="../assets/img/center-2.png" class="img-border i" style="width: 75%" alt="">
             </div>
             <div class="col-lg-6">
                 <h1 class="display-4 text-right">Un bureau de liaison à paris</h1>

@@ -11,11 +11,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navBarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li id="li-1" class="nav-item active">
                         <a class="nav-link scrollTo" href="" data-scroll="#section_home">Accueil</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li id="li-2" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-hover="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             À-propos <i class="fas fa-angle-down ml-2"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
@@ -23,15 +23,15 @@
                             <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_quelque_mot">e-mtiyaz en quelques mots</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li id="li-3" class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" data-hover="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Services <i class="fa fa-angle-down ml-2"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
                             <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_chart">Notre charte de qualité</a></li>
                             <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_engagement">Nos engagements au service</a></li>
                             <li class="dropdown-submenu">
-                                <a href="#" id="dropdownSubMenu"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">
+                                <a href="#" id="dropdownSubMenu"  role="button" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">
                                     Notre offre de service <i class="fas fa-angle-down ml-2"></i>
                                 </a>
                                 <ul aria-labelledby="dropdownSubMenu" class="dropdown-menu">
@@ -45,10 +45,10 @@
                             <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_suivi">Notre suivi pédagogique</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li id="li-4" class="nav-item">
                         <a class="nav-link scrollTo" href="#" data-scroll="#section_contact">Contact</a>
                     </li>
-                    <li class="nav-item nav-link">
+                    <li id="li-5" class="nav-item nav-link">
                         <a class="button scrollTo" href="" data-scroll="#section_rendez_vous">Rendez-vous</a>
                     </li>
                 </ul>
@@ -59,8 +59,46 @@
 
 <script>
 
-  import $ from 'jquery'
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
 
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('#logo-image', {
+      duration: 1000,
+      origin: 'left',
+      distance: '300px'
+    })
+    sr.reveal('#li-1', {
+      duration: 1000,
+      origin: 'top',
+      distance: '50px'
+    })
+    sr.reveal('#li-2', {
+      duration: 1000,
+      origin: 'top',
+      delay:400,
+      distance: '50px'
+    })
+    sr.reveal('#li-3', {
+      duration: 1000,
+      origin: 'top',
+      delay:600,
+      distance: '50px'
+    })
+    sr.reveal('#li-4', {
+      duration: 1000,
+      origin: 'top',
+      delay:800,
+      distance: '50px'
+    })
+    sr.reveal('#li-5', {
+      duration: 1000,
+      origin: 'top',
+      delay:1000,
+      distance: '50px'
+    })
+  });
   // to use : await sleep(ms)
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

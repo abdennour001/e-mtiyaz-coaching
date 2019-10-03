@@ -25,8 +25,8 @@
                   <div class="row text-left">
                     <div class="col-12">
                         <div class="shrink left-sec">
-                            <h5>Entretien de diagnostic pédagogique</h5>
-                            <p class="lead">Avant toute inscription pour un service e-mtiyaz, un entretien de diagnostic avec notre Conseiller Pédagogique est établi afin de cibler les besoins et les attentes de l’élève/l’étudiant et de sa famille. </p>
+                            <h5 class="t">Entretien de diagnostic pédagogique</h5>
+                            <p class="lead l">Avant toute inscription pour un service e-mtiyaz, un entretien de diagnostic avec notre Conseiller Pédagogique est établi afin de cibler les besoins et les attentes de l’élève/l’étudiant et de sa famille. </p>
                         </div>
                     </div>
                   </div>
@@ -36,8 +36,8 @@
                     <div class="row text-center center-sec">
                         <div class="col-12">
                             <div class="shrink">
-                                <h5>Suivi régulier</h5>
-                                <p class="lead">Dans le cadre de nos offres d’accompagnement scolaire, un point téléphonique est systématiquement tenu après la première séance  afin de confirmer ensemble l’adéquation de nos Intervenants
+                                <h5 class="t">Suivi régulier</h5>
+                                <p class="lead l">Dans le cadre de nos offres d’accompagnement scolaire, un point téléphonique est systématiquement tenu après la première séance  afin de confirmer ensemble l’adéquation de nos Intervenants
                                     Pédagogiques avec les besoins de l’élève. </p>
                             </div>
                         </div>
@@ -48,8 +48,8 @@
                     <div class="row text-right right-sec">
                         <div class="col-12">
                             <div class="shrink">
-                                <h5>Bilan final de progression</h5>
-                                <p class="lead">Régulièrement, un bilan pédagogique de suivi et d’évaluation est remis à l’élève ainsi qu’à sa famille afin de faire le point sur sa progression. Ce bilan permet d'apprécier les acquis de l'élève et de réévaluer ses besoins pédagogiques</p>
+                                <h5 class="t">Bilan final de progression</h5>
+                                <p class="lead l">Régulièrement, un bilan pédagogique de suivi et d’évaluation est remis à l’élève ainsi qu’à sa famille afin de faire le point sur sa progression. Ce bilan permet d'apprécier les acquis de l'élève et de réévaluer ses besoins pédagogiques</p>
                             </div>
                         </div>
                     </div>
@@ -60,6 +60,23 @@
 </template>
 
 <script>
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('.t', {
+      duration: 1000,
+      origin: 'top',
+      distance: '100px'
+    });
+    sr.reveal('.l', {
+      duration: 1000,
+      origin: 'bottom',
+      delay: 500,
+      distance: '50px'
+    });
+  });
   export default {
     name: 'monitoringPedagogique'
   }

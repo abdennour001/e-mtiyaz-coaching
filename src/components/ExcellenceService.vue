@@ -14,11 +14,11 @@
                 <p class="lead mt-4 text-left">- Les originaux des diplômes des intervenants sont systématiquement vérifiés. e-mtiyaz forme ses Intervenants : ceux-ci suivent une formation initiale qui leur permet d’obtenir le label de qualité e-mtiyaz et doivent régulièrement valider des modules de formation continue pour assurer l’excellence dans la durée.</p>
             </div>
             <div class="col-lg-6 mb-5">
-                <img src="../assets/img/img-services-1.png" class="w-100 img-border" alt="">
+                <img src="../assets/img/img-services-1.png" class="w-100 img-border i" alt="">
             </div>
 <!--            -->
             <div class="col-lg-6 mb-5">
-                <img src="../assets/img/img-services-2.png" class="w-75 img-border" alt="">
+                <img src="../assets/img/img-services-2.png" class="w-75 img-border i" alt="">
             </div>
             <div class="col-lg-6">
                 <h1 class="display-4 text-left">La qualité du processus de recrutement de nos intervenants pédagogiques</h1>
@@ -36,13 +36,34 @@
                 <p class="lead mt-4 text-left">- Il offre à votre enfant une palette de contenus pédagogiques (cours, fiches de révision) pour lui permettre d’optimiser son travail.</p>
             </div>
             <div class="col-lg-6">
-                <img src="../assets/img/img-services-3.png" class="w-100 img-border" alt="">
+                <img src="../assets/img/img-services-3.png" class="w-100 img-border i" alt="">
             </div>
         </div>
     </div>
 </template>
 
 <script>
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
+  $(document).ready(function() {
+    window.sr = ScrollReveal({ reset: false });
+    sr.reveal('.display-4', {
+      duration: 1000,
+      origin: 'top',
+      distance: '50px'
+    })
+    sr.reveal('.lead', {
+      duration: 1000,
+      origin: 'right',
+      distance: '50px'
+    })
+    sr.reveal('.i', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '100px'
+    })
+  });
   export default {
     name: 'ExcellenceService'
   }
