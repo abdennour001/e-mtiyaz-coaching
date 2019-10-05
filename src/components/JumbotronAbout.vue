@@ -41,53 +41,55 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('#t-1', {
-      duration: 1000,
-      origin: 'left',
-      distance: '50px'
-    })
-    sr.reveal('#t-2', {
-      duration: 1000,
-      origin: 'right',
-      delay: 250,
-      distance: '50px'
-    })
-    sr.reveal('#t-3', {
-      duration: 1000,
-      origin: 'left',
-      delay: 500,
-      distance: '50px'
-    })
-    sr.reveal('#p-1', {
-      duration: 1000,
-      origin: 'left',
-      delay: 750,
-      distance: '50px'
-    })
-    sr.reveal('#p-2', {
-      duration: 1000,
-      origin: 'left',
-      delay: 750,
-      distance: '50px'
-    })
-    sr.reveal('#p-3', {
-      duration: 1000,
-      origin: 'left',
-      delay: 750,
-      distance: '50px'
-    })
-    sr.reveal('#p-4', {
-      duration: 1000,
-      origin: 'left',
-      delay: 750,
-      distance: '50px'
-    })
-
-  });
   export default {
-    name: 'JumbotronAbout'
+    name: 'JumbotronAbout',
+    mounted () {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('#t-1', {
+          duration: 1000,
+          origin: 'left',
+          distance: '50px'
+        })
+        sr.reveal('#t-2', {
+          duration: 1000,
+          origin: 'right',
+          delay: 250,
+          distance: '50px'
+        })
+        sr.reveal('#t-3', {
+          duration: 1000,
+          origin: 'left',
+          delay: 500,
+          distance: '50px'
+        })
+        sr.reveal('#p-1', {
+          duration: 1000,
+          origin: 'left',
+          delay: 750,
+          distance: '50px'
+        })
+        sr.reveal('#p-2', {
+          duration: 1000,
+          origin: 'left',
+          delay: 750,
+          distance: '50px'
+        })
+        sr.reveal('#p-3', {
+          duration: 1000,
+          origin: 'left',
+          delay: 750,
+          distance: '50px'
+        })
+        sr.reveal('#p-4', {
+          duration: 1000,
+          origin: 'left',
+          delay: 750,
+          distance: '50px'
+        })
+
+      });
+    }
   }
 </script>
 

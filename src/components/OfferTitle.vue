@@ -12,16 +12,18 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('#p-1', {
-      duration: 2000,
-      origin: 'top',
-      distance: '50px'
-    })
-  });
   export default {
-    name: 'OfferTitle'
+    name: 'OfferTitle',
+    mounted () {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('#p-1', {
+          duration: 2000,
+          origin: 'top',
+          distance: '50px'
+        })
+      });
+    }
   }
 </script>
 

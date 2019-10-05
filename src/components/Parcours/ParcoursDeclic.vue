@@ -132,6 +132,9 @@
   export default {
     name: 'ParcoursDeclic',
     mounted() {
+
+      window.scrollTo(0, 0);
+
       $(document).ready(() => {
         $(window).scroll(() => {
           let btn = $('.returnBtn');

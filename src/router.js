@@ -14,7 +14,7 @@ export default new Router({
     { path: '/parcours/parcours-elite', name: 'elite', component: ParcoursElite },
     { path: '/parcours/parcours-declic', name: 'declic', component: ParcoursDeclic },
   ],
-  scrollBehavior (to, from, savedPosition) {
-    // return desired position
+  scrollBehavior(to, from, savedPosition) {
+
   }
 })

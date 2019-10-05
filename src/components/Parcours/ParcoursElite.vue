@@ -163,6 +163,9 @@
   export default {
     name: 'ParcoursElite',
     mounted() {
+
+      window.scrollTo(0, 0);
+
       $(document).ready(() => {
         $(window).scroll(() => {
           let btn = $('.returnBtn');

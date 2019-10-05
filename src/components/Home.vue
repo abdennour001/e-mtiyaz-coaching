@@ -44,6 +44,10 @@
 </template>
 
 <script>
+
+  import $ from 'jquery';
+  import ScrollReveal from 'scrollreveal';
+
   import Navigation from '../components/Navigation'
   import Title from '../components/Title'
   import WordAbout from '../components/WordAbout'
@@ -61,6 +65,7 @@
   import Contact from '../components/Contact'
   import Footer from '../components/Footer'
   import Location from '../components/Location'
+
   export default {
     name: 'Home',
     components: {
@@ -81,6 +86,59 @@
       WordAbout,
       Title,
       Navigation
+    },
+    mounted() {
+
+      $(document).ready(() => {
+
+        window.srTitle = ScrollReveal({ reset: true });
+        window.sr = ScrollReveal({ reset: false });
+        srTitle.reveal('#title', {
+          duration: 1000,
+          origin: 'top',
+          distance: '50px'
+        })
+        sr.reveal('.display-5', {
+          duration: 1000,
+          origin: 'left',
+          distance: '250px'
+        })
+        sr.reveal('.blue', {
+          duration: 1000,
+          origin: 'right',
+          distance: '250px'
+        });
+
+
+        $(window).scroll(() => {
+          if($(window).scrollTop() > 100) {
+            $('#topBtn').fadeIn("slow");
+          } else {
+            $('#topBtn').fadeOut("slow");
+          }
+        });
+
+        // Scroll up button
+        $('#topBtn').click((e) => {
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop : 0
+          }, 800)
+        });
+
+        $(".scrollTo").on('click', function(e) {
+          let getElem = $(this).data('scroll');
+          e.preventDefault();
+          if ($(getElem).length) {
+            let getOffset = $(getElem).offset().top;
+            let targetDistance = 70;
+            $('html,body').animate({
+              scrollTop : getOffset - targetDistance
+            }, 500);
+          }
+          return false;
+        });
+      })
     }
   }
 </script>

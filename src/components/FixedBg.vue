@@ -12,14 +12,5 @@
 
 <style lang="scss" scoped>
     @import '../variables.scss';
-    #fixed {
-        background: url(../assets/background/coaching.jpg) no-repeat fixed center center;
-        display: table;
-        height: 40rem;
-        position: relative;
-        opacity: 0.9;
-        width: 100%;
-        background-size: cover;
-    }
 
 </style>

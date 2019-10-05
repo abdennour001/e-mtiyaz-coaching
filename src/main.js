@@ -11,6 +11,7 @@ import VueAxios from 'vue-axios'
 
 Vue.use(VueAxios, axios)
 
+
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -21,7 +22,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false
 
-
+/* eslint-disable */
 new Vue({
   router,
   store,

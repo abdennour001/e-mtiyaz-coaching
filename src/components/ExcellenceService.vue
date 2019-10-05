@@ -2,7 +2,7 @@
     <div class="container-fluid" style="padding: 5rem">
         <div class="row text-center align-items-center">
             <div class="col-12">
-                <h1 class="display-5" style="text-transform: uppercase;">Nos engagement au service de l'excellence</h1>
+                <h1 class="display-5" style="text-transform: uppercase;">Nos engagements au service de l'excellence</h1>
             </div>
             <div class="col-12 mb-4">
                 <hr class="blue" style="width: 30%;">
@@ -46,26 +46,28 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('.display-4', {
-      duration: 1000,
-      origin: 'top',
-      distance: '50px'
-    })
-    sr.reveal('.lead', {
-      duration: 1000,
-      origin: 'right',
-      distance: '50px'
-    })
-    sr.reveal('.i', {
-      duration: 1000,
-      origin: 'bottom',
-      distance: '100px'
-    })
-  });
   export default {
-    name: 'ExcellenceService'
+    name: 'ExcellenceService',
+    mounted () {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('.display-4', {
+          duration: 1000,
+          origin: 'top',
+          distance: '50px'
+        })
+        sr.reveal('.lead', {
+          duration: 1000,
+          origin: 'right',
+          distance: '50px'
+        })
+        sr.reveal('.i', {
+          duration: 1000,
+          origin: 'bottom',
+          distance: '100px'
+        })
+      });
+    }
   }
 </script>
 

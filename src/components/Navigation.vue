@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <div class="d-flex align-items-center">
-                    <img id="logo-image" class="logo-image w-75" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white.png">
+                    <img id="logo-image" class="logo-image w-75" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png">
                 </div>
             </a>
             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBarResponsive">
@@ -11,7 +11,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navBarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li id="li-1" class="nav-item active">
+                    <li id="li-1" class="nav-item">
                         <a class="nav-link scrollTo" href="" data-scroll="#section_home">Accueil</a>
                     </li>
                     <li id="li-2" class="nav-item dropdown">
@@ -19,7 +19,7 @@
                             À-propos <i class="fas fa-angle-down ml-2"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
-                            <li><a class="dropdown-item scrollTo active" href="#" data-scroll="#section_mot">Le mot de directeur</a></li>
+                            <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_mot">Le mot de directeur</a></li>
                             <li><a class="dropdown-item scrollTo" href="#" data-scroll="#section_quelque_mot">e-mtiyaz en quelques mots</a></li>
                         </ul>
                     </li>
@@ -62,91 +62,92 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('#logo-image', {
-      duration: 1000,
-      origin: 'left',
-      distance: '300px'
-    })
-    sr.reveal('#li-1', {
-      duration: 1000,
-      origin: 'top',
-      distance: '50px'
-    })
-    sr.reveal('#li-2', {
-      duration: 1000,
-      origin: 'top',
-      delay:400,
-      distance: '50px'
-    })
-    sr.reveal('#li-3', {
-      duration: 1000,
-      origin: 'top',
-      delay:600,
-      distance: '50px'
-    })
-    sr.reveal('#li-4', {
-      duration: 1000,
-      origin: 'top',
-      delay:800,
-      distance: '50px'
-    })
-    sr.reveal('#li-5', {
-      duration: 1000,
-      origin: 'top',
-      delay:1000,
-      distance: '50px'
-    })
-  });
-  // to use : await sleep(ms)
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  $(document).ready(function() {
-    if ($(window).scrollTop()) {
-      $('.navbar-default').addClass('white-nav');
-      $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
-    } else {
-      $('.navbar-default').removeClass('white-nav');
-      $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white.png'));
-    }
-
-    $(window).scroll(async function () {
-      if ($(window).scrollTop()) {
-        $('.navbar-default').addClass('white-nav');
-        $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
-      } else {
-        $('.navbar-default').removeClass('white-nav');
-        $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white.png'));
-      }
-    });
-
-    $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-
-      $(this).siblings().toggleClass("show");
-
-
-      if (!$(this).next().hasClass('show')) {
-        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-      }
-      $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-        $('.dropdown-submenu .show').removeClass("show");
-      });
-    });
-
-
-  })
-
   export default {
     name: 'Navigation',
     data() {
       return {
-        logoImageSrc: require('../assets/logo/e-mtiyaz-logo-hor-without-sentence-white.png')
+
       }
+    },
+    mounted() {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('#logo-image', {
+          duration: 1000,
+          origin: 'left',
+          distance: '300px'
+        })
+        sr.reveal('#li-1', {
+          duration: 1000,
+          origin: 'top',
+          distance: '50px'
+        })
+        sr.reveal('#li-2', {
+          duration: 1000,
+          origin: 'top',
+          delay:400,
+          distance: '50px'
+        })
+        sr.reveal('#li-3', {
+          duration: 1000,
+          origin: 'top',
+          delay:600,
+          distance: '50px'
+        })
+        sr.reveal('#li-4', {
+          duration: 1000,
+          origin: 'top',
+          delay:800,
+          distance: '50px'
+        })
+        sr.reveal('#li-5', {
+          duration: 1000,
+          origin: 'top',
+          delay:1000,
+          distance: '50px'
+        })
+      });
+      // to use : await sleep(ms)
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      $(document).ready(function() {
+        if ($(window).scrollTop()) {
+          $('.navbar-default').addClass('white-nav');
+          $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
+        } else {
+          $('.navbar-default').removeClass('white-nav');
+          $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png'));
+        }
+
+        $(window).scroll(async function () {
+          if ($(window).scrollTop()) {
+            $('.navbar-default').addClass('white-nav');
+            $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
+          } else {
+            $('.navbar-default').removeClass('white-nav');
+            $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png'));
+          }
+        });
+
+        $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          $(this).siblings().toggleClass("show");
+
+
+          if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+          }
+          $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+          });
+        });
+
+
+      })
     },
     methods: {
       getLogoImageSrc() {
@@ -282,5 +283,16 @@
     .button:hover {
         background: $medium-blue-color;
         color: $font-color-light;
+    }
+
+    /** media queries **/
+    @media screen and (max-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+
+    }
+    @media (max-width: 576px) { /* mobile screen */
+
     }
 </style>

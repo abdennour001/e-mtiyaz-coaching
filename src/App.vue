@@ -1,70 +1,20 @@
 <template>
   <div id="app">
-      <router-view></router-view>
+      <transition name="fade" mode="out-in" appear>
+          <router-view></router-view>
+      </transition>
   </div>
 </template>
 
 <script>
 
-    import $ from 'jquery';
-    import ScrollReveal from 'scrollreveal';
-
-    $(document).ready(() => {
-
-      window.srTitle = ScrollReveal({ reset: true });
-      window.sr = ScrollReveal({ reset: false });
-      srTitle.reveal('#title', {
-        duration: 1000,
-        origin: 'top',
-        distance: '50px'
-      })
-      sr.reveal('.display-5', {
-        duration: 1000,
-        origin: 'left',
-        distance: '250px'
-      })
-      sr.reveal('.blue', {
-        duration: 1000,
-        origin: 'right',
-        distance: '250px'
-      });
-
-
-      $(window).scroll(() => {
-        if($(window).scrollTop() > 100) {
-          $('#topBtn').fadeIn("slow");
-        } else {
-          $('#topBtn').fadeOut("slow");
-        }
-      });
-
-      // Scroll up button
-      $('#topBtn').click((e) => {
-        e.preventDefault();
-        $('html, body').animate({
-          scrollTop : 0
-        }, 800)
-      });
-
-      $(".scrollTo").on('click', function(e) {
-        let getElem = $(this).data('scroll');
-        e.preventDefault();
-        if ($(getElem).length) {
-          let getOffset = $(getElem).offset().top;
-          let targetDistance = 70;
-          $('html,body').animate({
-            scrollTop : getOffset - targetDistance
-          }, 500);
-        }
-        return false;
-      });
-
-    })
-
+    import $ from 'jquery'
 
   export default {
     data() {
-
+      return {
+        transitionName:''
+      }
     },
     mounted() {
       let options = {
@@ -80,12 +30,29 @@
 
       // size bar 100% and and finish
       nanobar.go(100);
+    },
+    watch: {
+      $route(to, from) {
+        if (from.fullPath.includes('parcours')) {
+          $('html, body').animate({
+            scrollTop : 5050
+          }, 800)
+        }
+      }
     }
   }
 </script>
 
 <style lang="scss">
     @import './variables.scss';
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.4s
+    }
+
+    .fade-enter, .fade-leave-active {
+        opacity: 0
+    }
 
     #app {
         font-family: $font-family-sans-serif;
@@ -104,16 +71,6 @@
         overflow: hidden;
     }
 
-    .header:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 101%;
-        height: 50px;
-        background-image: url(./assets/background/main-bg-wavemdpi.svg);
-        background-size: cover;
-    }
     hr.light {
         background-color: $font-color-light;
         opacity: 0.3;

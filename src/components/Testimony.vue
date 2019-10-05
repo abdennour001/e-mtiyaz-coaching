@@ -7,17 +7,6 @@
             <div class="col-12 mb-4">
                 <hr class="blue" style="width: 20%;">
             </div>
-            <div class="col-lg-12 mb-4 text-center">
-                <div class="my-card-hor">
-                    <div class="my-card-body">
-                        <p class="lead" style="margin-top: 1rem; font-size: 1.3rem">
-                            <i class="fas fa-quote-left fa-lg"></i>
-                            Des nouvelles de nos enfants vous en aurez certainement car vous avez été plus que des enseignants.
-                            <i class="fas fa-quote-right fa-lg"></i>
-                        </p>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-4">
                 <div class="my-card">
                     <div class="my-card-body">

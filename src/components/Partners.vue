@@ -32,40 +32,42 @@
 <script>
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
-
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('.i', {
-      duration: 1000,
-      origin: 'top',
-      distance: '50px'
-    });
-    sr.reveal('.i-1', {
-      duration: 1000,
-      origin: 'top',
-      distance: '70px'
-    });
-    sr.reveal('.i-2', {
-      duration: 1000,
-      origin: 'top',
-      delay: 250,
-      distance: '70px'
-    });
-    sr.reveal('.i-3', {
-      duration: 1000,
-      origin: 'top',
-      delay: 500,
-      distance: '70px'
-    });
-    sr.reveal('.i-4', {
-      duration: 1000,
-      origin: 'top',
-      delay: 750,
-      distance: '70px'
-    });
-  });
   export default {
-    name: 'Partners'
+    name: 'Partners',
+    mounted () {
+
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('.i', {
+          duration: 1000,
+          origin: 'top',
+          distance: '50px'
+        });
+        sr.reveal('.i-1', {
+          duration: 1000,
+          origin: 'top',
+          distance: '70px'
+        });
+        sr.reveal('.i-2', {
+          duration: 1000,
+          origin: 'top',
+          delay: 250,
+          distance: '70px'
+        });
+        sr.reveal('.i-3', {
+          duration: 1000,
+          origin: 'top',
+          delay: 500,
+          distance: '70px'
+        });
+        sr.reveal('.i-4', {
+          duration: 1000,
+          origin: 'top',
+          delay: 750,
+          distance: '70px'
+        });
+      });
+    }
   }
 </script>
 

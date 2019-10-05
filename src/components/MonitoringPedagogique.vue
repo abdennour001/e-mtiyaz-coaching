@@ -63,22 +63,24 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('.t', {
-      duration: 1000,
-      origin: 'top',
-      distance: '100px'
-    });
-    sr.reveal('.l', {
-      duration: 1000,
-      origin: 'bottom',
-      delay: 500,
-      distance: '50px'
-    });
-  });
   export default {
-    name: 'monitoringPedagogique'
+    name: 'monitoringPedagogique',
+    mounted () {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('.t', {
+          duration: 1000,
+          origin: 'top',
+          distance: '100px'
+        });
+        sr.reveal('.l', {
+          duration: 1000,
+          origin: 'bottom',
+          delay: 500,
+          distance: '50px'
+        });
+      });
+    }
   }
 </script>
 

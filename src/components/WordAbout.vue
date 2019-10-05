@@ -42,26 +42,28 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('#firstChapter', {
-      duration: 1000,
-      origin: 'right',
-      distance: '50px'
-    });
-    sr.reveal('#secondChapter', {
-      duration: 1000,
-      origin: 'left',
-      distance: '50px'
-    });
-    sr.reveal('#thirdChapter', {
-      duration: 1000,
-      origin: 'right',
-      distance: '50px'
-    });
-  });
   export default {
-    name: 'WordAbout'
+    name: 'WordAbout',
+    mounted () {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('#firstChapter', {
+          duration: 1000,
+          origin: 'right',
+          distance: '50px'
+        });
+        sr.reveal('#secondChapter', {
+          duration: 1000,
+          origin: 'left',
+          distance: '50px'
+        });
+        sr.reveal('#thirdChapter', {
+          duration: 1000,
+          origin: 'right',
+          distance: '50px'
+        });
+      });
+    }
   }
 </script>
 

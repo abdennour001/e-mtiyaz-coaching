@@ -3,7 +3,7 @@
         <div class="row">
            <div class="col-lg-6 col-md-6 col-sm-12 offset-3">
                <div class="col-12 mt-3">
-                   <img src="../assets/logo/e-mtiyaz-logo-v3-coaching-white.png" style="width: 70%;"/>
+                   <img src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png" style="width: 70%;"/>
                </div>
                <div class="col-12 margin-3">
                    <p class="lead-1">Que vous souhaitez suivre vos études en Algérie ou à l’international, e-mtiyaz vous accompagne dans vos objectifs de réussite.</p>
@@ -101,4 +101,16 @@
     .read-more:hover .read-more-icon {
         transform: translateX(7px);
     }
+
+    /** media queries **/
+    @media screen and (max-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+
+    }
+    @media (max-width: 576px) { /* mobile screen */
+
+    }
+
 </style>

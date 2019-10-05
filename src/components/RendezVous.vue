@@ -48,50 +48,6 @@
 <script>
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
-
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('#nom', {
-      duration: 1000,
-      origin: 'left',
-      delay: 500,
-      distance: '100px'
-    })
-    sr.reveal('#email', {
-      duration: 1000,
-      origin: 'right',
-      delay: 500,
-      distance: '100px'
-    })
-    sr.reveal('#prenom', {
-      duration: 1000,
-      origin: 'left',
-      delay: 250,
-      distance: '100px'
-    })
-    sr.reveal('#telephone', {
-      duration: 1000,
-      origin: 'right',
-      delay: 250,
-      distance: '100px'
-    })
-    sr.reveal('#niveau', {
-      duration: 1000,
-      origin: 'left',
-      distance: '100px'
-    })
-    sr.reveal('#etablissement', {
-      duration: 1000,
-      origin: 'right',
-      distance: '100px'
-    });
-    sr.reveal('#rendezVousB', {
-      duration: 1000,
-      origin: 'bottom',
-      delay: 500,
-      distance: '100px'
-    })
-  });
   export default {
     name: 'RendezVous',
     data() {
@@ -108,6 +64,49 @@
     },
     mounted() {
 
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('#nom', {
+          duration: 1000,
+          origin: 'left',
+          delay: 500,
+          distance: '100px'
+        })
+        sr.reveal('#email', {
+          duration: 1000,
+          origin: 'right',
+          delay: 500,
+          distance: '100px'
+        })
+        sr.reveal('#prenom', {
+          duration: 1000,
+          origin: 'left',
+          delay: 250,
+          distance: '100px'
+        })
+        sr.reveal('#telephone', {
+          duration: 1000,
+          origin: 'right',
+          delay: 250,
+          distance: '100px'
+        })
+        sr.reveal('#niveau', {
+          duration: 1000,
+          origin: 'left',
+          distance: '100px'
+        })
+        sr.reveal('#etablissement', {
+          duration: 1000,
+          origin: 'right',
+          distance: '100px'
+        });
+        sr.reveal('#rendezVousB', {
+          duration: 1000,
+          origin: 'bottom',
+          delay: 500,
+          distance: '100px'
+        })
+      });
     },
     methods: {
       contactCall() {

@@ -94,26 +94,28 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('#p-1', {
-      duration: 2000,
-      origin: 'top',
-      distance: '50px'
-    })
-    sr.reveal('#p-2', {
-      duration: 2000,
-      origin: 'top',
-      distance: '50px'
-    })
-    sr.reveal('#p-3', {
-      duration: 2000,
-      origin: 'top',
-      distance: '50px'
-    })
-  });
   export default {
-    name: 'OfferBody'
+    name: 'OfferBody',
+    mounted () {
+      $(document).ready(function() {
+      window.sr = ScrollReveal({ reset: false });
+      sr.reveal('#p-1', {
+        duration: 2000,
+        origin: 'top',
+        distance: '50px'
+      })
+      sr.reveal('#p-2', {
+        duration: 2000,
+        origin: 'top',
+        distance: '50px'
+      })
+      sr.reveal('#p-3', {
+        duration: 2000,
+        origin: 'top',
+        distance: '50px'
+      })
+    });
+    }
   }
 </script>
 

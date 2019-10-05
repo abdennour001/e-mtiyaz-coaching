@@ -132,22 +132,24 @@
   import $ from 'jquery';
   import ScrollReveal from 'scrollreveal';
 
-  $(document).ready(function() {
-    window.sr = ScrollReveal({ reset: false });
-    sr.reveal('.title-parcours', {
-      duration: 1000,
-      origin: 'right',
-      distance: '100px'
-    });
-    sr.reveal('.offers', {
-      duration: 1000,
-      origin: 'top',
-      delay: 500,
-      distance: '50px'
-    });
-  });
   export default {
     name: 'Offers',
+    mounted() {
+      $(document).ready(function() {
+        window.sr = ScrollReveal({ reset: false });
+        sr.reveal('.title-parcours', {
+          duration: 1000,
+          origin: 'right',
+          distance: '100px'
+        });
+        sr.reveal('.offers', {
+          duration: 1000,
+          origin: 'top',
+          delay: 500,
+          distance: '50px'
+        });
+      });
+    },
     methods: {
 
     }

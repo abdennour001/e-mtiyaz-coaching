@@ -621,7 +621,6 @@
                     </div>
                 </div>
 <!--                -->
-<!--                -->
             </div>
             <!-- Return button -->
             <router-link class="returnBtn" to="/"><i class="fas fa-arrow-left mr-2"></i>Retour</router-link>
@@ -637,6 +636,9 @@
   export default {
     name: 'ParcoursClassique',
     mounted() {
+
+      window.scrollTo(0, 0);
+
       $(document).ready(() => {
         $(window).scroll(() => {
           let btn = $('.returnBtn');
