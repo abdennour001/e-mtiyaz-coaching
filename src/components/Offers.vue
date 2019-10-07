@@ -292,6 +292,10 @@
         .display-5 {
             font-size: 1.8rem;
         }
+        .read-more {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
     }
     @media (max-width: 576px) { /* mobile screen */
         h1 {

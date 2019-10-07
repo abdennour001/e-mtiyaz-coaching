@@ -7,10 +7,10 @@
             <div class="col-12 mb-4">
                 <hr class="blue" style="width: 20%;">
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="my-card">
                     <div class="my-card-body">
-                        <p class="lead" style="margin-top: 2rem">
+                        <p class="lead" style="margin-top: 1.7rem">
                             <i class="fas fa-quote-left fa-lg"></i>
                             Des nouvelles de nos enfants vous en aurez certainement car
                             vous avez été plus que des enseignants.
@@ -19,10 +19,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="my-card">
                     <div class="my-card-body">
-                        <p class="lead" style="font-size: 1.1rem;margin-top: 2rem">
+                        <p class="lead" style="font-size: 1.1rem;margin-top: 1.7rem">
                             <i class="fas fa-quote-left fa-lg"></i>
                             Vous m'avez été d'un important soutien durant cette année.
                             Merci à toute l'équipe de m'avoir déployé une grande aide. J'espère avoir l'occasion de vous revoir.
@@ -33,12 +33,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="my-card">
-                    <div class="my-card-img">
-                    </div>
                     <div class="my-card-body">
-                        <p class="lead" style="margin-top: 2rem">
+                        <p class="lead" style="margin-top: 1.7rem">
                             <i class="fas fa-quote-left fa-lg"></i>
                             Merci grâce à vous j'ai eu mon bac.
                             Peu de mots mais beaucoup de reconnaissance.
@@ -63,19 +61,8 @@
         color: $dark-blue-color;
         font-weight: 400;
     }
-    #fixed {
-        position: relative;
-    }
-    .content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
     .my-card {
-        position: relative;
-        width: 350px;
-        height: 300px;
+        margin-bottom: 20px;
         background-color: #efefef;
         display: flex;
         align-items: center;
@@ -84,19 +71,7 @@
         transition: .2s ease-in;
     }
 
-    .my-card-hor {
-        position: relative;
-        width: 100%;
-        height: 100px;
-        background-color: #efefef;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-        transition: .2s ease-in;
-    }
-
-    .my-card:hover, .my-card-hor:hover {
+    .my-card:hover {
         transform: scale(1.05);
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     }
@@ -111,6 +86,34 @@
     svg {
         color: $light-orange-color;
         margin-inline: 10px;
+    }
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .display-5 {
+            font-size: 1.5rem;
+        }
+        .lead {
+            font-size: 1rem;
+        }
     }
 </style>
 

@@ -21,8 +21,8 @@
         </div>
         <div class="container-fluid squeeze">
             <div class="row suivi-bg text-center">
-                <div class="col-lg-4">
-                  <div class="row text-left">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <div class="row text-lg-left text-md-left text-sm-center">
                     <div class="col-12">
                         <div class="shrink left-sec">
                             <h5 class="t">Entretien de diagnostic pédagogique</h5>
@@ -32,7 +32,7 @@
                   </div>
                 </div>
                 <!--                    -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="row text-center center-sec">
                         <div class="col-12">
                             <div class="shrink">
@@ -44,10 +44,10 @@
                     </div>
                 </div>
                 <!--                    -->
-                <div class="col-lg-4">
-                    <div class="row text-right right-sec">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="row text-lg-right text-md-right text-sm-center right-sec">
                         <div class="col-12">
-                            <div class="shrink">
+                            <div class="shrink mb-5">
                                 <h5 class="t">Bilan final de progression</h5>
                                 <p class="lead l">Régulièrement, un bilan pédagogique de suivi et d’évaluation est remis à l’élève ainsi qu’à sa famille afin de faire le point sur sa progression. Ce bilan permet d'apprécier les acquis de l'élève et de réévaluer ses besoins pédagogiques</p>
                             </div>
@@ -102,7 +102,7 @@
         background-size: 100%;
     }
     .lead {
-        font-size: 1em;
+        font-size: 1.1em;
     }
     .squeeze {
         width: 90%;
@@ -135,6 +135,136 @@
     @media (max-height: 800px) {
         .suivi-bg {
             height: 100vh;
+        }
+    }
+
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (min-width: 992px) and (max-width: 1360px) { /* large screen */
+
+        .left-sec {
+            margin-left: 6rem;
+            margin-top: 5rem;
+            .lead {
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+        }
+        .center-sec {
+            margin-top: 10rem;
+            margin-left: 2.5rem;
+            .lead {
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+        }
+        .right-sec {
+            margin-top: 5rem;
+            margin-right: 1.5rem;
+            .lead {
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        h5 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        .left-sec {
+            margin-left: 4.5rem;
+            margin-top: 3.2rem;
+            .lead {
+                font-size: .9rem;
+                margin-top: 10px;
+            }
+        }
+        .center-sec {
+            margin-top: 8rem;
+            margin-left: 1.5rem;
+            .lead {
+                font-size: .9rem;
+                margin-top: 10px;
+            }
+        }
+        .right-sec {
+            margin-top: 3.5rem;
+            margin-right: 1.3rem;
+            .lead {
+                font-size: .9rem;
+                margin-top: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        .content {
+            padding: 2.5rem;
+        }
+        h5 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        strong {
+            font-weight: 500;
+        }
+        .left-sec {
+            margin: 0;
+            .lead {
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+        }
+        .center-sec {
+            margin: 0;
+            .lead {
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+        }
+        .right-sec {
+            margin: 0;
+            .lead {
+                font-size: 1.1rem;
+                margin-top: 10px;
+            }
+        }
+        .suivi-bg {
+            background-image: none;
+        }
+        .shrink {
+            width: 100%;
+        }
+        .squeeze {
+            width: 95%;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .display-5 {
+            font-size: 1.5rem;
+        }
+        .display-4 {
+            font-size: 1.2em;
+        }
+        .lead {
+            font-size: 1rem;
+        }
+        .squeeze {
+            width: 100%;
         }
     }
 </style>

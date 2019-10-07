@@ -13,16 +13,16 @@
             </div>
         </div>
         <div class="row text-center squeeze-75 mb-4">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 mb-sm-5">
                 <img src="../assets/img/union-européenne.png" class="w-75 i-1" alt="">
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 mb-sm-5">
                 <img src="../assets/img/inc.png" class="w-75 i-2" alt="">
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 mb-sm-5">
                 <img src="../assets/img/heo.png" class="w-75 i-3" alt="">
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 mb-sm-5">
                 <img src="../assets/img/diamed.png" class="w-75 i-4" alt="">
             </div>
         </div>
@@ -80,5 +80,33 @@
     }
     strong {
         font-weight: 500;
+    }
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .display-5 {
+            font-size: 1.5rem;
+        }
+        .lead {
+            font-size: 1rem;
+        }
     }
 </style>

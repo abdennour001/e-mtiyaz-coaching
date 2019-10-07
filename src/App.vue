@@ -171,6 +171,16 @@
     @media screen and (min-width: 992px) { /* large screen */
 
     }
+    @media screen and (min-width: 992px) and (max-width: 1360px) { /* large screen */
+        .header {
+            position: relative;
+            margin-top: -75px;
+            background: url(./assets/background/main-bg-responsive.svg);
+            background-size: cover;
+            height: 100vh;
+            overflow: hidden;
+        }
+    }
     @media screen and (max-width: 992px) { /* large screen */
 
     }

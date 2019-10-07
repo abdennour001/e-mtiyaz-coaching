@@ -1,9 +1,9 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-light sticky-top navbar-default">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-default">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <div class="d-flex align-items-center">
-                    <img id="logo-image" class="logo-image w-75" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png">
+                    <img id="logo-image" class="logo-image w-75 mx-md-2 mx-sm-2" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png">
                 </div>
             </a>
             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navBarResponsive">
@@ -66,7 +66,7 @@
     name: 'Navigation',
     data() {
       return {
-
+        white: true
       }
     },
     mounted() {
@@ -131,6 +131,50 @@
           }
         });
 
+        $('.navbar-toggler').on('click', function() {
+          $(document).ready(function() {
+            window.sr = ScrollReveal({ reset: false });
+            sr.reveal('#li-1', {
+              duration: 1000,
+              origin: 'top',
+              distance: '50px'
+            })
+            sr.reveal('#li-2', {
+              duration: 1000,
+              origin: 'top',
+              delay:400,
+              distance: '50px'
+            })
+            sr.reveal('#li-3', {
+              duration: 1000,
+              origin: 'top',
+              delay:600,
+              distance: '50px'
+            })
+            sr.reveal('#li-4', {
+              duration: 1000,
+              origin: 'top',
+              delay:800,
+              distance: '50px'
+            })
+            sr.reveal('#li-5', {
+              duration: 1000,
+              origin: 'top',
+              delay:1000,
+              distance: '50px'
+            })
+          });
+          if(!$('.navbar-default').hasClass('white-nav')) {
+            if (!this.white) {
+              $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching.png'));
+              this.white = true
+            } else {
+              $('#logo-image').attr('src', require('../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png'));
+              this.white = false;
+            }
+          }
+        })
+
         $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
           event.preventDefault();
           event.stopPropagation();
@@ -191,6 +235,12 @@
         background-color: rgb(255, 255, 255);
         padding: 10px 25px;
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        .dark-blue-text {
+            color: $dark-blue-color;
+        }
+        .navbar-nav {
+            background: white;
+        }
     }
 
     .active > a > svg {
@@ -259,7 +309,7 @@
         border: none;
     }
     .dark-blue-text {
-        color: $font-color-light;
+        color: $dark-blue-color;
     }
 
     // Dropdown submenu style
@@ -290,12 +340,19 @@
 
     }
     @media screen and (max-width: 992px) { /* large screen */
-
+        .navbar-nav {
+            padding: 2rem;
+            background: white;
+        }
     }
     @media screen and (max-width: 768px) { /* medium screen */
 
     }
+    @media screen and (max-width: 648px) { /* large screen */
+        .dark-blue-text {
+            color: $font-color-light;
+        }
+    }
     @media (max-width: 576px) { /* mobile screen */
-
     }
 </style>

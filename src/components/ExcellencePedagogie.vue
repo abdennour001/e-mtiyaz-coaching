@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid" style="padding: 60px;">
+    <div class="container-fluid content">
         <div class="row text-center mb-5">
             <div class="col-12">
                 <h1 class="display-5" style="text-transform: uppercase;">Notre pédagogie d'excellence</h1>
@@ -64,6 +64,10 @@
 <style lang="scss" scoped>
     @import '../variables.scss';
 
+    .content {
+        padding: 60px;
+    }
+
     .display-5 {
         color: $dark-blue-color;
         font-weight: 400;
@@ -93,5 +97,83 @@
     }
     .lead {
         font-size: 1.2rem;
+    }
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        .display-4 {
+            font-size: 1.4rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        .crop-div {
+            width: 75%;
+            height: 140px;
+            background: $dark-blue-color;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $font-color-light;
+            margin-bottom: 20px;
+        }
+        .crop-div:before {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            border-bottom: 60px solid white;
+            border-left: 60px solid $dark-blue-color;
+            width: 0;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        .display-4 {
+            font-size: 1.2rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        .crop-div {
+            width: 90%;
+            height: 100px;
+            background: $dark-blue-color;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $font-color-light;
+            margin-bottom: 20px;
+        }
+        .crop-div:before {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            border-bottom: 35px solid white;
+            border-left: 35px solid $dark-blue-color;
+            width: 0;
+        }
+        .content {
+            padding: 30px;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .display-5 {
+            font-size: 1.5rem;
+        }
+        .display-4 {
+            font-size: 1.2rem;
+        }
+        .lead {
+            font-size: 1rem;
+        }
     }
 </style>

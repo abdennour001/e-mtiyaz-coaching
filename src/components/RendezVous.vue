@@ -135,7 +135,7 @@
             return new Promise(resolve => setTimeout(resolve, ms));
           }
 
-          this.axios.post("http://127.0.0.1/e-mtiyaz-coaching/send_rendez_vous.php", data)
+          this.axios.post("send_rendez_vous.php", data)
             .then(async response => {
               if (response.data.includes('Message has been sent')) {
                 this.success = true
@@ -194,5 +194,33 @@
         padding-bottom: 2rem;
         background-color: rgba(255, 255, 255, 0.8);
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    }
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        .lead {
+            font-size: 1.4rem;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        .lead {
+            font-size: 1.3rem;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .display-5 {
+            font-size: 1.5rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
     }
 </style>
