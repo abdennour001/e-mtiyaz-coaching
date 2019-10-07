@@ -1,9 +1,9 @@
 <template>
     <div id="title" class="container-fluid">
         <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-12 offset-3">
+           <div class="col-lg-6 col-sm-12 offset-lg-3">
                <div class="col-12 mt-3">
-                   <img src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png" style="width: 70%;"/>
+                   <img class="logo-img" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png"/>
                </div>
                <div class="col-12 margin-3">
                    <p class="lead-1">Que vous souhaitez suivre vos études en Algérie ou à l’international, e-mtiyaz vous accompagne dans vos objectifs de réussite.</p>
@@ -103,14 +103,51 @@
     }
 
     /** media queries **/
-    @media screen and (max-width: 992px) { /* large screen */
-
+    @media screen and (min-width: 992px) { /* medium screen */
+        .logo-img {
+            width: 75%;
+        }
     }
-    @media screen and (max-width: 768px) { /* medium screen */
-
+    @media screen and (max-width: 992px) { /* medium screen */
+        .lead-1 {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        .lead-2 {
+            font-size: 1.0rem;
+            font-weight: 300;
+        }
+        .logo-img {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 768px) { /* tablet screen */
+        .lead-1 {
+            font-size: 1.0rem;
+            font-weight: 300;
+        }
+        .lead-2 {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        .button {
+            font-size: 1em;
+            font-weight: 300;
+        }
     }
     @media (max-width: 576px) { /* mobile screen */
-
+        .lead-1 {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        .lead-2 {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        .button {
+            font-size: 1em;
+            font-weight: 300;
+        }
     }
 
 </style>

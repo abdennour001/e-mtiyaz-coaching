@@ -286,6 +286,9 @@
     }
 
     /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
     @media screen and (max-width: 992px) { /* large screen */
 
     }

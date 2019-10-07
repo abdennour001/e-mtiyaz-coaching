@@ -13,22 +13,22 @@
             <div class="col-12">
                 <p id='p-1' class="lead"><strong>Notre concept repose sur trois piliers garants de notre engagement :</strong></p>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-12 col-12-sm">
                 <div class="circle mb-3 icon-1"></div>
                 <p id="p-2" class="lead">Une pédagogie inspirée des meilleurs standards académiques à l’international</p>
             </div>
-            <div class="col-1 align-self-center">
+            <div class="col-lg-1 col-md-12 col-sm-12 align-self-center plus">
                 <i class="fas fa-plus fa-lg"></i>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-12 col-12-sm">
                 <div class="circle mb-3 icon-2">
                 </div>
                 <p id="p-3" class="lead">Un centre d’excellence équipé de conditions pédagogiques et technologiques optimales</p>
             </div>
-            <div class="col-1 align-self-center">
+            <div class="col-lg-1 col-md-12 col-sm-12 align-self-center plus">
                 <i class="fas fa-plus fa-lg"></i>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3 col-md-12 col-12-sm">
                 <div class="circle mb-3 icon-3"></div>
                 <p id="p-4" class="lead">Une équipe d’Intervenants Pédagogiques issus de formations prestigieuses et formés sous le label d’e-mtiyaz</p>
             </div>
@@ -124,4 +124,58 @@
     .jumbotron {
         background-color: $light-blue-color-transparent;
     }
+
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        h5 {
+
+        }
+        h4 {
+
+        }
+        h3 {
+
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        h5 {
+            font-size: 1.2rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        .plus {
+            margin-bottom: 10px;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        h5 {
+            font-size: 1.1rem;
+        }
+        h4 {
+            font-size: 1.1rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+        }
+        .lead {
+            font-size: 1rem;
+        }
+        .plus {
+            margin-bottom: 10px;
+        }
+    }
+
 </style>

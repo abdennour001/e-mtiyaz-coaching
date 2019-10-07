@@ -10,7 +10,7 @@
 <!--           -->
           <div class="container-fluid jumbotron">
               <div class="row text-center">
-                  <div class="col-4 orange">
+                  <div class="col-lg-4 col-md-4 col-sm-12 orange">
                       <router-link class="router orange" to="/parcours/parcours-classique">
                           <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
@@ -49,7 +49,7 @@
                       </div>
                   </div>
                   <!--           -->
-                  <div class="col-4 purple">
+                  <div class="col-lg-4 col-md-4 col-sm-12 purple">
                       <router-link class="router purple" to="/parcours/parcours-elite">
                           <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
@@ -86,7 +86,7 @@
                       </div>
                   </div>
                   <!--           -->
-                  <div class="col-4 green">
+                  <div class="col-lg-4 col-md-4 col-sm-12 green">
                       <router-link class="router green" to="/parcours/parcours-declic">
                           <div class="col-10 offset-2 title-parcours">
                               <div class="row text-left">
@@ -266,5 +266,51 @@
         font-size: 1rem;
         margin-bottom: 10px;
         text-transform: uppercase;
+    }
+
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1.3rem;
+        }
+        ul li {
+            font-size: .9rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        h1 {
+            font-size: 1.8rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+        ul li {
+            font-size: .8rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .read-more {
+            font-size: 1em;
+            margin-bottom: 25px;
+        }
+        .display-5 {
+            font-size: 1.5rem;
+        }
     }
 </style>

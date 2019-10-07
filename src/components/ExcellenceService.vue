@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid" style="padding: 5rem">
+    <div class="container-fluid content">
         <div class="row text-center align-items-center">
             <div class="col-12">
                 <h1 class="display-5" style="text-transform: uppercase;">Nos engagements au service de l'excellence</h1>
@@ -74,6 +74,10 @@
 <style lang="scss" scoped>
     @import '../variables.scss';
 
+    .content {
+        padding: 5rem;
+    }
+
     .display-5 {
         color: $dark-blue-color;
         font-weight: 400;
@@ -85,5 +89,42 @@
     }
     .lead {
         font-size: 1.1rem;
+    }
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* large screen */
+
+    }
+    @media screen and (max-width: 992px) { /* large screen */
+        .display-5 {
+            font-size: 2rem;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+    }
+    @media screen and (max-width: 768px) { /* medium screen */
+        .display-5 {
+            font-size: 1.8rem;
+        }
+        .display-4 {
+            font-size: 1.3em;
+        }
+        .lead {
+            font-size: 1.1rem;
+        }
+        .content {
+            padding: 2.5rem;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .display-5 {
+            font-size: 1.5rem;
+        }
+        .display-4 {
+            font-size: 1.2em;
+        }
+        .lead {
+            font-size: 1rem;
+        }
     }
 </style>

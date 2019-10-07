@@ -39,4 +39,28 @@
     strong {
         font-weight: 500;
     }
+
+    /** media queries **/
+    @media screen and (min-width: 992px) { /* medium screen */
+
+    }
+    @media screen and (max-width: 992px) { /* medium screen */
+
+    }
+    @media screen and (max-width: 768px) { /* tablet screen */
+        .lead {
+            font-size: 1.2rem;
+        }
+        .content {
+            width: 95%;
+        }
+    }
+    @media (max-width: 576px) { /* mobile screen */
+        .lead {
+            font-size: 1.1rem;
+        }
+        .content {
+            width: 100%;
+        }
+    }
 </style>
