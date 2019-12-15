@@ -6,7 +6,7 @@
                    <img class="logo-img" src="../assets/logo/e-mtiyaz-logo-v3-coaching-white-orange-coaching.png"/>
                </div>
                <div class="col-12 margin-3">
-                   <p class="lead-1">Que vous souhaitez suivre vos études en Algérie ou à l’international, e-mtiyaz vous accompagne dans vos objectifs de réussite.</p>
+                   <p class="lead-1">Que vous souhaitiez suivre vos études en Algérie ou à l’international, e-mtiyaz vous accompagne dans vos objectifs de réussite.</p>
                </div>
                <div class="col-12 mb-4">
                    <hr class="light">

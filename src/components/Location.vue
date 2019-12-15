@@ -12,8 +12,8 @@
             <p class="lead">023 37 10 61</p>
             <h2 class="display-6">Par email:</h2>
             <p class="lead">excellence@e-mtiyaz.com</p>
-            <p class="lead">Dar Diaf - 98 Lot Benhaddadi Said</p>
-            <p class="lead">Chéraga - Alger</p>
+            <p class="lead" style="text-transform: uppercase;">Dar Diaf - 98 Lot Benhaddadi Said</p>
+            <p class="lead" style="text-transform: uppercase;">Chéraga - Alger</p>
         </div>
         <div class="col-12">
             <iframe class="py-4" src="https://www.google.com/maps/d/embed?mid=1rVEb_-u7GMsu1Vv1Kv3jJVJuNL0" width="100%" height="450" frameBorder="0"></iframe>
@@ -37,7 +37,6 @@
         font-weight: 500;
     }
     .lead {
-        text-transform: uppercase;
         font-size: 1.2rem;
         font-weight: 500;
         color: $dark-orange-color;

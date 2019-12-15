@@ -23,14 +23,18 @@
                 <img src="../assets/img/centre-1.png" class="img-border i m-3" style="width: 70%" alt="">
             </div>
 <!--            -->
-            <div class="col-lg-6 col-md-12 col-sm-12 text-lg-left text-md-center text-md-center">
-                <img src="../assets/img/center-2.png" class="img-border i m-3" style="width: 75%" alt="">
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 mt-md-3 mt-sm-5">
-                <h1 class="display-4 text-lg-right text-md-center text-md-center">Un bureau de liaison à paris</h1>
-                <h1 class="text-lg-right text-md-center text-md-center display-4">
-                    <strong>pour vous accompagner partout dans le monde</strong></h1>
-                <p class="lead text-lg-right text-md-center text-md-center mt-4">En plus du centre d’excellence basé à Alger, e-mtiyaz dispose d’un bureau de liaison à Paris. Celui-ci est en charge de la recherche et de l’innovation et a pour mission de nouer des partenariats avec les institutions académiques les plus prestigieuses dans le monde afin de garantir la qualité pédagogique des services e-mtiyaz. Enfin, le bureau de liaison sert de structure d’accueil et d’accompagnement afin d’assurer le suivi de nos étudiants qui quittent l’Algérie et entreprennent des parcours d’études à l’international.</p>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2 col-md-12 col-sm-12 mt-md-3 mt-sm-5">
+                        <h1 class="display-4 text-lg-right text-md-center text-md-center">Un bureau de liaison à paris</h1>
+                        <h1 class="text-lg-right text-md-center text-md-center display-4">
+                            <strong>pour vous accompagner partout dans le monde</strong></h1>
+                        <p class="lead text-lg-right text-md-center text-md-center mt-4">En plus du centre d’excellence basé à Alger, e-mtiyaz dispose d’un bureau de liaison à Paris. Celui-ci est en charge de la recherche et de l’innovation et a pour mission de nouer des partenariats avec les institutions académiques les plus prestigieuses dans le monde afin de garantir la qualité pédagogique des services e-mtiyaz. Enfin, le bureau de liaison sert de structure d’accueil et d’accompagnement afin d’assurer le suivi de nos étudiants qui quittent l’Algérie et entreprennent des parcours d’études à l’international.</p>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 col-md-12 col-sm-12 text-lg-left text-md-center text-md-center">
+                        <img src="../assets/img/center-2.png" class="img-border i m-3" style="width: 75%" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

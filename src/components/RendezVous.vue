@@ -146,7 +146,7 @@
                 await sleep(5000);
                 this.success = false;
               } else {
-                alert(2)
+                alert('something goes wrong...')
               }
             })
             .catch(e => {

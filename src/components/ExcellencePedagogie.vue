@@ -25,7 +25,7 @@
             <div class="col-lg-3">
                 <div class="row justify-content-center">
                     <div class="crop-div">
-                        <h3 class="display-4">Meilleures établissements</h3>
+                        <h3 class="display-4">Meilleurs établissements</h3>
                     </div>
                 </div>
             </div>

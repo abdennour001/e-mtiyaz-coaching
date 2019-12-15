@@ -19,6 +19,7 @@
                 </p>
             </div>
         </div>
+
         <div class="container-fluid squeeze">
             <div class="row suivi-bg text-center">
                 <div class="col-lg-4 col-md-4 col-sm-12">
@@ -265,6 +266,9 @@
         }
         .squeeze {
             width: 100%;
+        }
+        .suivi-bg {
+            height: 150vh;
         }
     }
 </style>
