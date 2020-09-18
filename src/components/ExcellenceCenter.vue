@@ -12,7 +12,7 @@
                 <h1 class="display-4 text-lg-left text-md-center text-md-center">Un centre d'excellence</h1>
                 <h1 class="text-lg-left text-md-center text-md-center display-4"><strong>Accessible et moderne</strong></h1>
                 <p class="lead text-lg-left text-md-center text-md-center mt-4">
-                    Pour délivrer son offre éducative dans les meilleures conditions, e-mtiyaz s'est doté d'un centre d'excellence. À Alger, au coeur du quartier de Dar Diaf à Cheraga, les élèves sont accueillis au sein d'une structure moderne pour favoriser au maximum leur stimulation et leur donner toutes les chances d'étudier dans des conditions optimales.
+                    Pour délivrer son offre éducative dans les meilleures conditions, e-mtiyaz s'est doté d'un centre d'excellence. À Alger, au coeur du quartier du Paradou, dans les hauteurs d'Hydra, les élèves sont accueillis au sein d'une structure moderne pour favoriser au maximum leur stimulation et leur donner toutes les chances d'étudier dans des conditions optimales.
                 </p>
                 <p class="lead text-lg-left text-md-center text-md-center">
                     Dans des salles de classe à effectifs réduits, équipées des dernières technologies éducatives, les élèves se retrouvent dans un environnement idéal pour se consacrer à leurs études.
