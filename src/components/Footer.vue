@@ -10,8 +10,9 @@
                     <p>05 40 40 51 15</p>
                     <p>023 37 10 61</p>
                     <p>excellence@e-mtiyaz.com</p>
-                    <p>Dar Diaf - 98 Lot Benhaddadi Said</p>
-                    <p>Chéraga - Alger</p>
+                    <p>Siège e-mtiyaz - Alger</p>
+                    <p>36B Lot Petite Provence</p>
+                  <p>16035 Hydra, Alger</p>
                 </div>
                 <div class="col-md-6">
                     <hr class="light">

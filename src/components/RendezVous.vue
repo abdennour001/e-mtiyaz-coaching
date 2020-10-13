@@ -39,7 +39,7 @@
                 <div id="rendezVousB">
                     <button type="button" @click="contactCall" class="button w-100">Envoyer</button>
                 </div>
-                <div v-if="success" class="alert-success" style="height: 45px; padding-top: 10px; margin-top: 10px; border-radius: 100px">Vous avez envoyé la demande avec succès</div>
+                <div v-if="success" class="alert-success" style="height: 45px; padding-top: 10px; margin-top: 10px; border-radius: 100px">Votre demande a été envoyée avec succès.</div>
             </form>
         </div>
     </div>
@@ -116,7 +116,7 @@
           data.append('nom', this.nom);
           data.append('prenom', this.prenom);
           data.append('email', this.email);
-          data.append('telephone', this.telephone);
+          data.append('telephone', this.tel);
           data.append('niveau', this.niveau);
           data.append('etablissement', this.etablissement);
 

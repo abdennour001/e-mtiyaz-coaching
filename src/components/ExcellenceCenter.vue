@@ -20,7 +20,7 @@
                 </p>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 text-lg-right text-md-center text-md-center">
-                <img src="../assets/img/centre-1.png" class="img-border i m-3" style="width: 70%" alt="">
+                <img src="../assets/img/centre-1.jpg" class="img-border i m-3" style="width: 70%" alt="">
             </div>
 <!--            -->
             <div class="col-12">
